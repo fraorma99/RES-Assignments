@@ -43,9 +43,12 @@ def step1_build_summary_tables(step1_results, input_data):
         })
     df_dem = pd.DataFrame(dem_rows).sort_values("bus")
 
+    total_operating_cost = (df_gen["marginal_cost"] * df_gen["p_MW"]).sum()
+
     totals = {
         "market_price": price,
         "objective_welfare": step1_results.objective_value,
+        "total_operating_cost": total_operating_cost,
         "total_gen_MW": df_gen["p_MW"].sum(),
         "total_wind_MW": df_wind["p_MW"].sum(),
         "total_demand_served_MW": df_dem["d_MW"].sum(),
