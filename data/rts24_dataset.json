@@ -1,0 +1,7237 @@
+{
+  "buses": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "slack_bus": 13,
+  "generators": [
+    {
+      "unit": 1,
+      "bus": 1,
+      "Pmax_MW": 152.0,
+      "Pmin_MW": 30.4,
+      "Rup_MW": 40.0,
+      "Rdown_MW": 40.0,
+      "RU_MW_per_h": 120.0,
+      "RD_MW_per_h": 120.0,
+      "UT_h": 8.0,
+      "DT_h": 4.0,
+      "Ci_USD_per_MWh": 13.32,
+      "Cu": 15.0,
+      "Cd": 14.0,
+      "Cplus": 15.0,
+      "Cminus": 11.0,
+      "Csu_USD": 1430.4,
+      "Pini_MW": 76.0,
+      "Uini": 1.0,
+      "Tini_h": 22.0
+    },
+    {
+      "unit": 2,
+      "bus": 2,
+      "Pmax_MW": 152.0,
+      "Pmin_MW": 30.4,
+      "Rup_MW": 40.0,
+      "Rdown_MW": 40.0,
+      "RU_MW_per_h": 120.0,
+      "RD_MW_per_h": 120.0,
+      "UT_h": 8.0,
+      "DT_h": 4.0,
+      "Ci_USD_per_MWh": 13.32,
+      "Cu": 15.0,
+      "Cd": 14.0,
+      "Cplus": 15.0,
+      "Cminus": 11.0,
+      "Csu_USD": 1430.4,
+      "Pini_MW": 76.0,
+      "Uini": 1.0,
+      "Tini_h": 22.0
+    },
+    {
+      "unit": 3,
+      "bus": 7,
+      "Pmax_MW": 350.0,
+      "Pmin_MW": 75.0,
+      "Rup_MW": 70.0,
+      "Rdown_MW": 70.0,
+      "RU_MW_per_h": 350.0,
+      "RD_MW_per_h": 350.0,
+      "UT_h": 8.0,
+      "DT_h": 8.0,
+      "Ci_USD_per_MWh": 20.7,
+      "Cu": 10.0,
+      "Cd": 9.0,
+      "Cplus": 24.0,
+      "Cminus": 16.0,
+      "Csu_USD": 1725.0,
+      "Pini_MW": 0.0,
+      "Uini": 0.0,
+      "Tini_h": -2.0
+    },
+    {
+      "unit": 4,
+      "bus": 13,
+      "Pmax_MW": 591.0,
+      "Pmin_MW": 206.85,
+      "Rup_MW": 180.0,
+      "Rdown_MW": 180.0,
+      "RU_MW_per_h": 240.0,
+      "RD_MW_per_h": 240.0,
+      "UT_h": 12.0,
+      "DT_h": 10.0,
+      "Ci_USD_per_MWh": 20.93,
+      "Cu": 8.0,
+      "Cd": 7.0,
+      "Cplus": 25.0,
+      "Cminus": 17.0,
+      "Csu_USD": 3056.7,
+      "Pini_MW": 0.0,
+      "Uini": 0.0,
+      "Tini_h": -1.0
+    },
+    {
+      "unit": 5,
+      "bus": 15,
+      "Pmax_MW": 60.0,
+      "Pmin_MW": 12.0,
+      "Rup_MW": 60.0,
+      "Rdown_MW": 60.0,
+      "RU_MW_per_h": 60.0,
+      "RD_MW_per_h": 60.0,
+      "UT_h": 4.0,
+      "DT_h": 2.0,
+      "Ci_USD_per_MWh": 26.11,
+      "Cu": 7.0,
+      "Cd": 5.0,
+      "Cplus": 28.0,
+      "Cminus": 23.0,
+      "Csu_USD": 437.0,
+      "Pini_MW": 0.0,
+      "Uini": 0.0,
+      "Tini_h": -1.0
+    },
+    {
+      "unit": 6,
+      "bus": 15,
+      "Pmax_MW": 155.0,
+      "Pmin_MW": 54.25,
+      "Rup_MW": 30.0,
+      "Rdown_MW": 30.0,
+      "RU_MW_per_h": 155.0,
+      "RD_MW_per_h": 155.0,
+      "UT_h": 8.0,
+      "DT_h": 8.0,
+      "Ci_USD_per_MWh": 10.52,
+      "Cu": 16.0,
+      "Cd": 14.0,
+      "Cplus": 16.0,
+      "Cminus": 7.0,
+      "Csu_USD": 312.0,
+      "Pini_MW": 0.0,
+      "Uini": 0.0,
+      "Tini_h": -2.0
+    },
+    {
+      "unit": 7,
+      "bus": 16,
+      "Pmax_MW": 155.0,
+      "Pmin_MW": 54.25,
+      "Rup_MW": 30.0,
+      "Rdown_MW": 30.0,
+      "RU_MW_per_h": 155.0,
+      "RD_MW_per_h": 155.0,
+      "UT_h": 8.0,
+      "DT_h": 8.0,
+      "Ci_USD_per_MWh": 10.52,
+      "Cu": 16.0,
+      "Cd": 14.0,
+      "Cplus": 16.0,
+      "Cminus": 7.0,
+      "Csu_USD": 312.0,
+      "Pini_MW": 124.0,
+      "Uini": 1.0,
+      "Tini_h": 10.0
+    },
+    {
+      "unit": 8,
+      "bus": 18,
+      "Pmax_MW": 400.0,
+      "Pmin_MW": 100.0,
+      "Rup_MW": 0.0,
+      "Rdown_MW": 0.0,
+      "RU_MW_per_h": 280.0,
+      "RD_MW_per_h": 280.0,
+      "UT_h": 1.0,
+      "DT_h": 1.0,
+      "Ci_USD_per_MWh": 6.02,
+      "Cu": 0.0,
+      "Cd": 0.0,
+      "Cplus": 0.0,
+      "Cminus": 0.0,
+      "Csu_USD": 0.0,
+      "Pini_MW": 240.0,
+      "Uini": 1.0,
+      "Tini_h": 50.0
+    },
+    {
+      "unit": 9,
+      "bus": 21,
+      "Pmax_MW": 400.0,
+      "Pmin_MW": 100.0,
+      "Rup_MW": 0.0,
+      "Rdown_MW": 0.0,
+      "RU_MW_per_h": 280.0,
+      "RD_MW_per_h": 280.0,
+      "UT_h": 1.0,
+      "DT_h": 1.0,
+      "Ci_USD_per_MWh": 5.47,
+      "Cu": 0.0,
+      "Cd": 0.0,
+      "Cplus": 0.0,
+      "Cminus": 0.0,
+      "Csu_USD": 0.0,
+      "Pini_MW": 240.0,
+      "Uini": 1.0,
+      "Tini_h": 16.0
+    },
+    {
+      "unit": 10,
+      "bus": 22,
+      "Pmax_MW": 300.0,
+      "Pmin_MW": 300.0,
+      "Rup_MW": 0.0,
+      "Rdown_MW": 0.0,
+      "RU_MW_per_h": 300.0,
+      "RD_MW_per_h": 300.0,
+      "UT_h": 0.0,
+      "DT_h": 0.0,
+      "Ci_USD_per_MWh": 0.0,
+      "Cu": 0.0,
+      "Cd": 0.0,
+      "Cplus": 0.0,
+      "Cminus": 0.0,
+      "Csu_USD": 0.0,
+      "Pini_MW": 240.0,
+      "Uini": 1.0,
+      "Tini_h": 24.0
+    },
+    {
+      "unit": 11,
+      "bus": 23,
+      "Pmax_MW": 310.0,
+      "Pmin_MW": 108.5,
+      "Rup_MW": 60.0,
+      "Rdown_MW": 60.0,
+      "RU_MW_per_h": 180.0,
+      "RD_MW_per_h": 180.0,
+      "UT_h": 8.0,
+      "DT_h": 8.0,
+      "Ci_USD_per_MWh": 10.52,
+      "Cu": 17.0,
+      "Cd": 16.0,
+      "Cplus": 14.0,
+      "Cminus": 8.0,
+      "Csu_USD": 624.0,
+      "Pini_MW": 248.0,
+      "Uini": 1.0,
+      "Tini_h": 10.0
+    },
+    {
+      "unit": 12,
+      "bus": 23,
+      "Pmax_MW": 350.0,
+      "Pmin_MW": 140.0,
+      "Rup_MW": 40.0,
+      "Rdown_MW": 40.0,
+      "RU_MW_per_h": 240.0,
+      "RD_MW_per_h": 240.0,
+      "UT_h": 8.0,
+      "DT_h": 8.0,
+      "Ci_USD_per_MWh": 10.89,
+      "Cu": 16.0,
+      "Cd": 14.0,
+      "Cplus": 16.0,
+      "Cminus": 8.0,
+      "Csu_USD": 2298.0,
+      "Pini_MW": 280.0,
+      "Uini": 1.0,
+      "Tini_h": 50.0
+    }
+  ],
+  "system_load_24h": [
+    {
+      "hour": 1,
+      "system_demand_MW": 1775.835
+    },
+    {
+      "hour": 2,
+      "system_demand_MW": 1669.815
+    },
+    {
+      "hour": 3,
+      "system_demand_MW": 1590.3
+    },
+    {
+      "hour": 4,
+      "system_demand_MW": 1563.795
+    },
+    {
+      "hour": 5,
+      "system_demand_MW": 1563.795
+    },
+    {
+      "hour": 6,
+      "system_demand_MW": 1590.3
+    },
+    {
+      "hour": 7,
+      "system_demand_MW": 1961.37
+    },
+    {
+      "hour": 8,
+      "system_demand_MW": 2279.43
+    },
+    {
+      "hour": 9,
+      "system_demand_MW": 2517.975
+    },
+    {
+      "hour": 10,
+      "system_demand_MW": 2544.48
+    },
+    {
+      "hour": 11,
+      "system_demand_MW": 2544.48
+    },
+    {
+      "hour": 12,
+      "system_demand_MW": 2517.975
+    },
+    {
+      "hour": 13,
+      "system_demand_MW": 2517.975
+    },
+    {
+      "hour": 14,
+      "system_demand_MW": 2517.975
+    },
+    {
+      "hour": 15,
+      "system_demand_MW": 2464.965
+    },
+    {
+      "hour": 16,
+      "system_demand_MW": 2464.965
+    },
+    {
+      "hour": 17,
+      "system_demand_MW": 2623.995
+    },
+    {
+      "hour": 18,
+      "system_demand_MW": 2650.5
+    },
+    {
+      "hour": 19,
+      "system_demand_MW": 2650.5
+    },
+    {
+      "hour": 20,
+      "system_demand_MW": 2544.48
+    },
+    {
+      "hour": 21,
+      "system_demand_MW": 2411.955
+    },
+    {
+      "hour": 22,
+      "system_demand_MW": 2199.915
+    },
+    {
+      "hour": 23,
+      "system_demand_MW": 1934.865
+    },
+    {
+      "hour": 24,
+      "system_demand_MW": 1669.815
+    }
+  ],
+  "load_distribution": [
+    {
+      "load_id": 1,
+      "bus": 1,
+      "share_percent": 3.8
+    },
+    {
+      "load_id": 2,
+      "bus": 2,
+      "share_percent": 3.4
+    },
+    {
+      "load_id": 3,
+      "bus": 3,
+      "share_percent": 6.3
+    },
+    {
+      "load_id": 4,
+      "bus": 4,
+      "share_percent": 2.6
+    },
+    {
+      "load_id": 5,
+      "bus": 5,
+      "share_percent": 2.5
+    },
+    {
+      "load_id": 6,
+      "bus": 6,
+      "share_percent": 4.8
+    },
+    {
+      "load_id": 7,
+      "bus": 7,
+      "share_percent": 4.4
+    },
+    {
+      "load_id": 8,
+      "bus": 8,
+      "share_percent": 6.0
+    },
+    {
+      "load_id": 9,
+      "bus": 9,
+      "share_percent": 6.1
+    },
+    {
+      "load_id": 10,
+      "bus": 10,
+      "share_percent": 6.8
+    },
+    {
+      "load_id": 11,
+      "bus": 13,
+      "share_percent": 9.3
+    },
+    {
+      "load_id": 12,
+      "bus": 14,
+      "share_percent": 6.8
+    },
+    {
+      "load_id": 13,
+      "bus": 15,
+      "share_percent": 11.1
+    },
+    {
+      "load_id": 14,
+      "bus": 16,
+      "share_percent": 3.5
+    },
+    {
+      "load_id": 15,
+      "bus": 18,
+      "share_percent": 11.7
+    },
+    {
+      "load_id": 16,
+      "bus": 19,
+      "share_percent": 6.4
+    },
+    {
+      "load_id": 17,
+      "bus": 20,
+      "share_percent": 4.5
+    }
+  ],
+  "nodal_load_24h": [
+    {
+      "hour": 1,
+      "bus": 1,
+      "demand_MW": 67.48173
+    },
+    {
+      "hour": 1,
+      "bus": 2,
+      "demand_MW": 60.37839
+    },
+    {
+      "hour": 1,
+      "bus": 3,
+      "demand_MW": 111.877605
+    },
+    {
+      "hour": 1,
+      "bus": 4,
+      "demand_MW": 46.171710000000004
+    },
+    {
+      "hour": 1,
+      "bus": 5,
+      "demand_MW": 44.395875000000004
+    },
+    {
+      "hour": 1,
+      "bus": 6,
+      "demand_MW": 85.24008
+    },
+    {
+      "hour": 1,
+      "bus": 7,
+      "demand_MW": 78.13674
+    },
+    {
+      "hour": 1,
+      "bus": 8,
+      "demand_MW": 106.5501
+    },
+    {
+      "hour": 1,
+      "bus": 9,
+      "demand_MW": 108.325935
+    },
+    {
+      "hour": 1,
+      "bus": 10,
+      "demand_MW": 120.75678
+    },
+    {
+      "hour": 1,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 1,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 1,
+      "bus": 13,
+      "demand_MW": 165.15265500000004
+    },
+    {
+      "hour": 1,
+      "bus": 14,
+      "demand_MW": 120.75678
+    },
+    {
+      "hour": 1,
+      "bus": 15,
+      "demand_MW": 197.117685
+    },
+    {
+      "hour": 1,
+      "bus": 16,
+      "demand_MW": 62.154225000000004
+    },
+    {
+      "hour": 1,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 1,
+      "bus": 18,
+      "demand_MW": 207.772695
+    },
+    {
+      "hour": 1,
+      "bus": 19,
+      "demand_MW": 113.65344
+    },
+    {
+      "hour": 1,
+      "bus": 20,
+      "demand_MW": 79.912575
+    },
+    {
+      "hour": 1,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 1,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 1,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 1,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 1,
+      "demand_MW": 63.45297
+    },
+    {
+      "hour": 2,
+      "bus": 2,
+      "demand_MW": 56.77371000000001
+    },
+    {
+      "hour": 2,
+      "bus": 3,
+      "demand_MW": 105.198345
+    },
+    {
+      "hour": 2,
+      "bus": 4,
+      "demand_MW": 43.41519
+    },
+    {
+      "hour": 2,
+      "bus": 5,
+      "demand_MW": 41.745375
+    },
+    {
+      "hour": 2,
+      "bus": 6,
+      "demand_MW": 80.15112
+    },
+    {
+      "hour": 2,
+      "bus": 7,
+      "demand_MW": 73.47186
+    },
+    {
+      "hour": 2,
+      "bus": 8,
+      "demand_MW": 100.1889
+    },
+    {
+      "hour": 2,
+      "bus": 9,
+      "demand_MW": 101.858715
+    },
+    {
+      "hour": 2,
+      "bus": 10,
+      "demand_MW": 113.54742000000002
+    },
+    {
+      "hour": 2,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 13,
+      "demand_MW": 155.29279500000004
+    },
+    {
+      "hour": 2,
+      "bus": 14,
+      "demand_MW": 113.54742000000002
+    },
+    {
+      "hour": 2,
+      "bus": 15,
+      "demand_MW": 185.349465
+    },
+    {
+      "hour": 2,
+      "bus": 16,
+      "demand_MW": 58.44352500000001
+    },
+    {
+      "hour": 2,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 18,
+      "demand_MW": 195.368355
+    },
+    {
+      "hour": 2,
+      "bus": 19,
+      "demand_MW": 106.86816
+    },
+    {
+      "hour": 2,
+      "bus": 20,
+      "demand_MW": 75.141675
+    },
+    {
+      "hour": 2,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 2,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 1,
+      "demand_MW": 60.4314
+    },
+    {
+      "hour": 3,
+      "bus": 2,
+      "demand_MW": 54.0702
+    },
+    {
+      "hour": 3,
+      "bus": 3,
+      "demand_MW": 100.1889
+    },
+    {
+      "hour": 3,
+      "bus": 4,
+      "demand_MW": 41.3478
+    },
+    {
+      "hour": 3,
+      "bus": 5,
+      "demand_MW": 39.7575
+    },
+    {
+      "hour": 3,
+      "bus": 6,
+      "demand_MW": 76.3344
+    },
+    {
+      "hour": 3,
+      "bus": 7,
+      "demand_MW": 69.9732
+    },
+    {
+      "hour": 3,
+      "bus": 8,
+      "demand_MW": 95.41799999999999
+    },
+    {
+      "hour": 3,
+      "bus": 9,
+      "demand_MW": 97.00829999999999
+    },
+    {
+      "hour": 3,
+      "bus": 10,
+      "demand_MW": 108.1404
+    },
+    {
+      "hour": 3,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 13,
+      "demand_MW": 147.89790000000002
+    },
+    {
+      "hour": 3,
+      "bus": 14,
+      "demand_MW": 108.1404
+    },
+    {
+      "hour": 3,
+      "bus": 15,
+      "demand_MW": 176.5233
+    },
+    {
+      "hour": 3,
+      "bus": 16,
+      "demand_MW": 55.660500000000006
+    },
+    {
+      "hour": 3,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 18,
+      "demand_MW": 186.06509999999997
+    },
+    {
+      "hour": 3,
+      "bus": 19,
+      "demand_MW": 101.7792
+    },
+    {
+      "hour": 3,
+      "bus": 20,
+      "demand_MW": 71.56349999999999
+    },
+    {
+      "hour": 3,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 3,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 1,
+      "demand_MW": 59.42421
+    },
+    {
+      "hour": 4,
+      "bus": 2,
+      "demand_MW": 53.16903000000001
+    },
+    {
+      "hour": 4,
+      "bus": 3,
+      "demand_MW": 98.519085
+    },
+    {
+      "hour": 4,
+      "bus": 4,
+      "demand_MW": 40.65867000000001
+    },
+    {
+      "hour": 4,
+      "bus": 5,
+      "demand_MW": 39.094875
+    },
+    {
+      "hour": 4,
+      "bus": 6,
+      "demand_MW": 75.06216
+    },
+    {
+      "hour": 4,
+      "bus": 7,
+      "demand_MW": 68.80698000000001
+    },
+    {
+      "hour": 4,
+      "bus": 8,
+      "demand_MW": 93.82770000000001
+    },
+    {
+      "hour": 4,
+      "bus": 9,
+      "demand_MW": 95.391495
+    },
+    {
+      "hour": 4,
+      "bus": 10,
+      "demand_MW": 106.33806000000001
+    },
+    {
+      "hour": 4,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 13,
+      "demand_MW": 145.43293500000001
+    },
+    {
+      "hour": 4,
+      "bus": 14,
+      "demand_MW": 106.33806000000001
+    },
+    {
+      "hour": 4,
+      "bus": 15,
+      "demand_MW": 173.58124500000002
+    },
+    {
+      "hour": 4,
+      "bus": 16,
+      "demand_MW": 54.732825000000005
+    },
+    {
+      "hour": 4,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 18,
+      "demand_MW": 182.964015
+    },
+    {
+      "hour": 4,
+      "bus": 19,
+      "demand_MW": 100.08288
+    },
+    {
+      "hour": 4,
+      "bus": 20,
+      "demand_MW": 70.370775
+    },
+    {
+      "hour": 4,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 4,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 1,
+      "demand_MW": 59.42421
+    },
+    {
+      "hour": 5,
+      "bus": 2,
+      "demand_MW": 53.16903000000001
+    },
+    {
+      "hour": 5,
+      "bus": 3,
+      "demand_MW": 98.519085
+    },
+    {
+      "hour": 5,
+      "bus": 4,
+      "demand_MW": 40.65867000000001
+    },
+    {
+      "hour": 5,
+      "bus": 5,
+      "demand_MW": 39.094875
+    },
+    {
+      "hour": 5,
+      "bus": 6,
+      "demand_MW": 75.06216
+    },
+    {
+      "hour": 5,
+      "bus": 7,
+      "demand_MW": 68.80698000000001
+    },
+    {
+      "hour": 5,
+      "bus": 8,
+      "demand_MW": 93.82770000000001
+    },
+    {
+      "hour": 5,
+      "bus": 9,
+      "demand_MW": 95.391495
+    },
+    {
+      "hour": 5,
+      "bus": 10,
+      "demand_MW": 106.33806000000001
+    },
+    {
+      "hour": 5,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 13,
+      "demand_MW": 145.43293500000001
+    },
+    {
+      "hour": 5,
+      "bus": 14,
+      "demand_MW": 106.33806000000001
+    },
+    {
+      "hour": 5,
+      "bus": 15,
+      "demand_MW": 173.58124500000002
+    },
+    {
+      "hour": 5,
+      "bus": 16,
+      "demand_MW": 54.732825000000005
+    },
+    {
+      "hour": 5,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 18,
+      "demand_MW": 182.964015
+    },
+    {
+      "hour": 5,
+      "bus": 19,
+      "demand_MW": 100.08288
+    },
+    {
+      "hour": 5,
+      "bus": 20,
+      "demand_MW": 70.370775
+    },
+    {
+      "hour": 5,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 5,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 1,
+      "demand_MW": 60.4314
+    },
+    {
+      "hour": 6,
+      "bus": 2,
+      "demand_MW": 54.0702
+    },
+    {
+      "hour": 6,
+      "bus": 3,
+      "demand_MW": 100.1889
+    },
+    {
+      "hour": 6,
+      "bus": 4,
+      "demand_MW": 41.3478
+    },
+    {
+      "hour": 6,
+      "bus": 5,
+      "demand_MW": 39.7575
+    },
+    {
+      "hour": 6,
+      "bus": 6,
+      "demand_MW": 76.3344
+    },
+    {
+      "hour": 6,
+      "bus": 7,
+      "demand_MW": 69.9732
+    },
+    {
+      "hour": 6,
+      "bus": 8,
+      "demand_MW": 95.41799999999999
+    },
+    {
+      "hour": 6,
+      "bus": 9,
+      "demand_MW": 97.00829999999999
+    },
+    {
+      "hour": 6,
+      "bus": 10,
+      "demand_MW": 108.1404
+    },
+    {
+      "hour": 6,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 13,
+      "demand_MW": 147.89790000000002
+    },
+    {
+      "hour": 6,
+      "bus": 14,
+      "demand_MW": 108.1404
+    },
+    {
+      "hour": 6,
+      "bus": 15,
+      "demand_MW": 176.5233
+    },
+    {
+      "hour": 6,
+      "bus": 16,
+      "demand_MW": 55.660500000000006
+    },
+    {
+      "hour": 6,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 18,
+      "demand_MW": 186.06509999999997
+    },
+    {
+      "hour": 6,
+      "bus": 19,
+      "demand_MW": 101.7792
+    },
+    {
+      "hour": 6,
+      "bus": 20,
+      "demand_MW": 71.56349999999999
+    },
+    {
+      "hour": 6,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 6,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 1,
+      "demand_MW": 74.53205999999999
+    },
+    {
+      "hour": 7,
+      "bus": 2,
+      "demand_MW": 66.68658
+    },
+    {
+      "hour": 7,
+      "bus": 3,
+      "demand_MW": 123.56630999999999
+    },
+    {
+      "hour": 7,
+      "bus": 4,
+      "demand_MW": 50.99562
+    },
+    {
+      "hour": 7,
+      "bus": 5,
+      "demand_MW": 49.03425
+    },
+    {
+      "hour": 7,
+      "bus": 6,
+      "demand_MW": 94.14576
+    },
+    {
+      "hour": 7,
+      "bus": 7,
+      "demand_MW": 86.30028
+    },
+    {
+      "hour": 7,
+      "bus": 8,
+      "demand_MW": 117.6822
+    },
+    {
+      "hour": 7,
+      "bus": 9,
+      "demand_MW": 119.64357
+    },
+    {
+      "hour": 7,
+      "bus": 10,
+      "demand_MW": 133.37316
+    },
+    {
+      "hour": 7,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 13,
+      "demand_MW": 182.40741000000003
+    },
+    {
+      "hour": 7,
+      "bus": 14,
+      "demand_MW": 133.37316
+    },
+    {
+      "hour": 7,
+      "bus": 15,
+      "demand_MW": 217.71206999999998
+    },
+    {
+      "hour": 7,
+      "bus": 16,
+      "demand_MW": 68.64795000000001
+    },
+    {
+      "hour": 7,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 18,
+      "demand_MW": 229.48028999999997
+    },
+    {
+      "hour": 7,
+      "bus": 19,
+      "demand_MW": 125.52767999999999
+    },
+    {
+      "hour": 7,
+      "bus": 20,
+      "demand_MW": 88.26164999999999
+    },
+    {
+      "hour": 7,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 7,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 1,
+      "demand_MW": 86.61833999999999
+    },
+    {
+      "hour": 8,
+      "bus": 2,
+      "demand_MW": 77.50062
+    },
+    {
+      "hour": 8,
+      "bus": 3,
+      "demand_MW": 143.60408999999999
+    },
+    {
+      "hour": 8,
+      "bus": 4,
+      "demand_MW": 59.26518
+    },
+    {
+      "hour": 8,
+      "bus": 5,
+      "demand_MW": 56.985749999999996
+    },
+    {
+      "hour": 8,
+      "bus": 6,
+      "demand_MW": 109.41264
+    },
+    {
+      "hour": 8,
+      "bus": 7,
+      "demand_MW": 100.29492
+    },
+    {
+      "hour": 8,
+      "bus": 8,
+      "demand_MW": 136.76579999999998
+    },
+    {
+      "hour": 8,
+      "bus": 9,
+      "demand_MW": 139.04522999999998
+    },
+    {
+      "hour": 8,
+      "bus": 10,
+      "demand_MW": 155.00124
+    },
+    {
+      "hour": 8,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 13,
+      "demand_MW": 211.98699000000002
+    },
+    {
+      "hour": 8,
+      "bus": 14,
+      "demand_MW": 155.00124
+    },
+    {
+      "hour": 8,
+      "bus": 15,
+      "demand_MW": 253.01673
+    },
+    {
+      "hour": 8,
+      "bus": 16,
+      "demand_MW": 79.78005
+    },
+    {
+      "hour": 8,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 18,
+      "demand_MW": 266.69330999999994
+    },
+    {
+      "hour": 8,
+      "bus": 19,
+      "demand_MW": 145.88352
+    },
+    {
+      "hour": 8,
+      "bus": 20,
+      "demand_MW": 102.57435
+    },
+    {
+      "hour": 8,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 8,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 1,
+      "demand_MW": 95.68305
+    },
+    {
+      "hour": 9,
+      "bus": 2,
+      "demand_MW": 85.61115000000001
+    },
+    {
+      "hour": 9,
+      "bus": 3,
+      "demand_MW": 158.63242499999998
+    },
+    {
+      "hour": 9,
+      "bus": 4,
+      "demand_MW": 65.46735000000001
+    },
+    {
+      "hour": 9,
+      "bus": 5,
+      "demand_MW": 62.949375
+    },
+    {
+      "hour": 9,
+      "bus": 6,
+      "demand_MW": 120.8628
+    },
+    {
+      "hour": 9,
+      "bus": 7,
+      "demand_MW": 110.79090000000001
+    },
+    {
+      "hour": 9,
+      "bus": 8,
+      "demand_MW": 151.0785
+    },
+    {
+      "hour": 9,
+      "bus": 9,
+      "demand_MW": 153.596475
+    },
+    {
+      "hour": 9,
+      "bus": 10,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 9,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 13,
+      "demand_MW": 234.17167500000002
+    },
+    {
+      "hour": 9,
+      "bus": 14,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 9,
+      "bus": 15,
+      "demand_MW": 279.495225
+    },
+    {
+      "hour": 9,
+      "bus": 16,
+      "demand_MW": 88.129125
+    },
+    {
+      "hour": 9,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 18,
+      "demand_MW": 294.603075
+    },
+    {
+      "hour": 9,
+      "bus": 19,
+      "demand_MW": 161.1504
+    },
+    {
+      "hour": 9,
+      "bus": 20,
+      "demand_MW": 113.30887499999999
+    },
+    {
+      "hour": 9,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 9,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 1,
+      "demand_MW": 96.69024
+    },
+    {
+      "hour": 10,
+      "bus": 2,
+      "demand_MW": 86.51232
+    },
+    {
+      "hour": 10,
+      "bus": 3,
+      "demand_MW": 160.30224
+    },
+    {
+      "hour": 10,
+      "bus": 4,
+      "demand_MW": 66.15648
+    },
+    {
+      "hour": 10,
+      "bus": 5,
+      "demand_MW": 63.612
+    },
+    {
+      "hour": 10,
+      "bus": 6,
+      "demand_MW": 122.13504
+    },
+    {
+      "hour": 10,
+      "bus": 7,
+      "demand_MW": 111.95712000000002
+    },
+    {
+      "hour": 10,
+      "bus": 8,
+      "demand_MW": 152.6688
+    },
+    {
+      "hour": 10,
+      "bus": 9,
+      "demand_MW": 155.21328
+    },
+    {
+      "hour": 10,
+      "bus": 10,
+      "demand_MW": 173.02464
+    },
+    {
+      "hour": 10,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 13,
+      "demand_MW": 236.63664000000003
+    },
+    {
+      "hour": 10,
+      "bus": 14,
+      "demand_MW": 173.02464
+    },
+    {
+      "hour": 10,
+      "bus": 15,
+      "demand_MW": 282.43728
+    },
+    {
+      "hour": 10,
+      "bus": 16,
+      "demand_MW": 89.05680000000001
+    },
+    {
+      "hour": 10,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 18,
+      "demand_MW": 297.70416
+    },
+    {
+      "hour": 10,
+      "bus": 19,
+      "demand_MW": 162.84672
+    },
+    {
+      "hour": 10,
+      "bus": 20,
+      "demand_MW": 114.5016
+    },
+    {
+      "hour": 10,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 10,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 1,
+      "demand_MW": 96.69024
+    },
+    {
+      "hour": 11,
+      "bus": 2,
+      "demand_MW": 86.51232
+    },
+    {
+      "hour": 11,
+      "bus": 3,
+      "demand_MW": 160.30224
+    },
+    {
+      "hour": 11,
+      "bus": 4,
+      "demand_MW": 66.15648
+    },
+    {
+      "hour": 11,
+      "bus": 5,
+      "demand_MW": 63.612
+    },
+    {
+      "hour": 11,
+      "bus": 6,
+      "demand_MW": 122.13504
+    },
+    {
+      "hour": 11,
+      "bus": 7,
+      "demand_MW": 111.95712000000002
+    },
+    {
+      "hour": 11,
+      "bus": 8,
+      "demand_MW": 152.6688
+    },
+    {
+      "hour": 11,
+      "bus": 9,
+      "demand_MW": 155.21328
+    },
+    {
+      "hour": 11,
+      "bus": 10,
+      "demand_MW": 173.02464
+    },
+    {
+      "hour": 11,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 13,
+      "demand_MW": 236.63664000000003
+    },
+    {
+      "hour": 11,
+      "bus": 14,
+      "demand_MW": 173.02464
+    },
+    {
+      "hour": 11,
+      "bus": 15,
+      "demand_MW": 282.43728
+    },
+    {
+      "hour": 11,
+      "bus": 16,
+      "demand_MW": 89.05680000000001
+    },
+    {
+      "hour": 11,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 18,
+      "demand_MW": 297.70416
+    },
+    {
+      "hour": 11,
+      "bus": 19,
+      "demand_MW": 162.84672
+    },
+    {
+      "hour": 11,
+      "bus": 20,
+      "demand_MW": 114.5016
+    },
+    {
+      "hour": 11,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 11,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 1,
+      "demand_MW": 95.68305
+    },
+    {
+      "hour": 12,
+      "bus": 2,
+      "demand_MW": 85.61115000000001
+    },
+    {
+      "hour": 12,
+      "bus": 3,
+      "demand_MW": 158.63242499999998
+    },
+    {
+      "hour": 12,
+      "bus": 4,
+      "demand_MW": 65.46735000000001
+    },
+    {
+      "hour": 12,
+      "bus": 5,
+      "demand_MW": 62.949375
+    },
+    {
+      "hour": 12,
+      "bus": 6,
+      "demand_MW": 120.8628
+    },
+    {
+      "hour": 12,
+      "bus": 7,
+      "demand_MW": 110.79090000000001
+    },
+    {
+      "hour": 12,
+      "bus": 8,
+      "demand_MW": 151.0785
+    },
+    {
+      "hour": 12,
+      "bus": 9,
+      "demand_MW": 153.596475
+    },
+    {
+      "hour": 12,
+      "bus": 10,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 12,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 13,
+      "demand_MW": 234.17167500000002
+    },
+    {
+      "hour": 12,
+      "bus": 14,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 12,
+      "bus": 15,
+      "demand_MW": 279.495225
+    },
+    {
+      "hour": 12,
+      "bus": 16,
+      "demand_MW": 88.129125
+    },
+    {
+      "hour": 12,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 18,
+      "demand_MW": 294.603075
+    },
+    {
+      "hour": 12,
+      "bus": 19,
+      "demand_MW": 161.1504
+    },
+    {
+      "hour": 12,
+      "bus": 20,
+      "demand_MW": 113.30887499999999
+    },
+    {
+      "hour": 12,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 12,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 1,
+      "demand_MW": 95.68305
+    },
+    {
+      "hour": 13,
+      "bus": 2,
+      "demand_MW": 85.61115000000001
+    },
+    {
+      "hour": 13,
+      "bus": 3,
+      "demand_MW": 158.63242499999998
+    },
+    {
+      "hour": 13,
+      "bus": 4,
+      "demand_MW": 65.46735000000001
+    },
+    {
+      "hour": 13,
+      "bus": 5,
+      "demand_MW": 62.949375
+    },
+    {
+      "hour": 13,
+      "bus": 6,
+      "demand_MW": 120.8628
+    },
+    {
+      "hour": 13,
+      "bus": 7,
+      "demand_MW": 110.79090000000001
+    },
+    {
+      "hour": 13,
+      "bus": 8,
+      "demand_MW": 151.0785
+    },
+    {
+      "hour": 13,
+      "bus": 9,
+      "demand_MW": 153.596475
+    },
+    {
+      "hour": 13,
+      "bus": 10,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 13,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 13,
+      "demand_MW": 234.17167500000002
+    },
+    {
+      "hour": 13,
+      "bus": 14,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 13,
+      "bus": 15,
+      "demand_MW": 279.495225
+    },
+    {
+      "hour": 13,
+      "bus": 16,
+      "demand_MW": 88.129125
+    },
+    {
+      "hour": 13,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 18,
+      "demand_MW": 294.603075
+    },
+    {
+      "hour": 13,
+      "bus": 19,
+      "demand_MW": 161.1504
+    },
+    {
+      "hour": 13,
+      "bus": 20,
+      "demand_MW": 113.30887499999999
+    },
+    {
+      "hour": 13,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 13,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 1,
+      "demand_MW": 95.68305
+    },
+    {
+      "hour": 14,
+      "bus": 2,
+      "demand_MW": 85.61115000000001
+    },
+    {
+      "hour": 14,
+      "bus": 3,
+      "demand_MW": 158.63242499999998
+    },
+    {
+      "hour": 14,
+      "bus": 4,
+      "demand_MW": 65.46735000000001
+    },
+    {
+      "hour": 14,
+      "bus": 5,
+      "demand_MW": 62.949375
+    },
+    {
+      "hour": 14,
+      "bus": 6,
+      "demand_MW": 120.8628
+    },
+    {
+      "hour": 14,
+      "bus": 7,
+      "demand_MW": 110.79090000000001
+    },
+    {
+      "hour": 14,
+      "bus": 8,
+      "demand_MW": 151.0785
+    },
+    {
+      "hour": 14,
+      "bus": 9,
+      "demand_MW": 153.596475
+    },
+    {
+      "hour": 14,
+      "bus": 10,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 14,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 13,
+      "demand_MW": 234.17167500000002
+    },
+    {
+      "hour": 14,
+      "bus": 14,
+      "demand_MW": 171.22230000000002
+    },
+    {
+      "hour": 14,
+      "bus": 15,
+      "demand_MW": 279.495225
+    },
+    {
+      "hour": 14,
+      "bus": 16,
+      "demand_MW": 88.129125
+    },
+    {
+      "hour": 14,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 18,
+      "demand_MW": 294.603075
+    },
+    {
+      "hour": 14,
+      "bus": 19,
+      "demand_MW": 161.1504
+    },
+    {
+      "hour": 14,
+      "bus": 20,
+      "demand_MW": 113.30887499999999
+    },
+    {
+      "hour": 14,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 14,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 1,
+      "demand_MW": 93.66867
+    },
+    {
+      "hour": 15,
+      "bus": 2,
+      "demand_MW": 83.80881000000001
+    },
+    {
+      "hour": 15,
+      "bus": 3,
+      "demand_MW": 155.292795
+    },
+    {
+      "hour": 15,
+      "bus": 4,
+      "demand_MW": 64.08909000000001
+    },
+    {
+      "hour": 15,
+      "bus": 5,
+      "demand_MW": 61.62412500000001
+    },
+    {
+      "hour": 15,
+      "bus": 6,
+      "demand_MW": 118.31832000000001
+    },
+    {
+      "hour": 15,
+      "bus": 7,
+      "demand_MW": 108.45846000000002
+    },
+    {
+      "hour": 15,
+      "bus": 8,
+      "demand_MW": 147.8979
+    },
+    {
+      "hour": 15,
+      "bus": 9,
+      "demand_MW": 150.362865
+    },
+    {
+      "hour": 15,
+      "bus": 10,
+      "demand_MW": 167.61762000000002
+    },
+    {
+      "hour": 15,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 13,
+      "demand_MW": 229.24174500000004
+    },
+    {
+      "hour": 15,
+      "bus": 14,
+      "demand_MW": 167.61762000000002
+    },
+    {
+      "hour": 15,
+      "bus": 15,
+      "demand_MW": 273.61111500000004
+    },
+    {
+      "hour": 15,
+      "bus": 16,
+      "demand_MW": 86.27377500000001
+    },
+    {
+      "hour": 15,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 18,
+      "demand_MW": 288.400905
+    },
+    {
+      "hour": 15,
+      "bus": 19,
+      "demand_MW": 157.75776000000002
+    },
+    {
+      "hour": 15,
+      "bus": 20,
+      "demand_MW": 110.92342500000001
+    },
+    {
+      "hour": 15,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 15,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 1,
+      "demand_MW": 93.66867
+    },
+    {
+      "hour": 16,
+      "bus": 2,
+      "demand_MW": 83.80881000000001
+    },
+    {
+      "hour": 16,
+      "bus": 3,
+      "demand_MW": 155.292795
+    },
+    {
+      "hour": 16,
+      "bus": 4,
+      "demand_MW": 64.08909000000001
+    },
+    {
+      "hour": 16,
+      "bus": 5,
+      "demand_MW": 61.62412500000001
+    },
+    {
+      "hour": 16,
+      "bus": 6,
+      "demand_MW": 118.31832000000001
+    },
+    {
+      "hour": 16,
+      "bus": 7,
+      "demand_MW": 108.45846000000002
+    },
+    {
+      "hour": 16,
+      "bus": 8,
+      "demand_MW": 147.8979
+    },
+    {
+      "hour": 16,
+      "bus": 9,
+      "demand_MW": 150.362865
+    },
+    {
+      "hour": 16,
+      "bus": 10,
+      "demand_MW": 167.61762000000002
+    },
+    {
+      "hour": 16,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 13,
+      "demand_MW": 229.24174500000004
+    },
+    {
+      "hour": 16,
+      "bus": 14,
+      "demand_MW": 167.61762000000002
+    },
+    {
+      "hour": 16,
+      "bus": 15,
+      "demand_MW": 273.61111500000004
+    },
+    {
+      "hour": 16,
+      "bus": 16,
+      "demand_MW": 86.27377500000001
+    },
+    {
+      "hour": 16,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 18,
+      "demand_MW": 288.400905
+    },
+    {
+      "hour": 16,
+      "bus": 19,
+      "demand_MW": 157.75776000000002
+    },
+    {
+      "hour": 16,
+      "bus": 20,
+      "demand_MW": 110.92342500000001
+    },
+    {
+      "hour": 16,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 16,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 1,
+      "demand_MW": 99.71181
+    },
+    {
+      "hour": 17,
+      "bus": 2,
+      "demand_MW": 89.21583
+    },
+    {
+      "hour": 17,
+      "bus": 3,
+      "demand_MW": 165.31168499999998
+    },
+    {
+      "hour": 17,
+      "bus": 4,
+      "demand_MW": 68.22387
+    },
+    {
+      "hour": 17,
+      "bus": 5,
+      "demand_MW": 65.599875
+    },
+    {
+      "hour": 17,
+      "bus": 6,
+      "demand_MW": 125.95176
+    },
+    {
+      "hour": 17,
+      "bus": 7,
+      "demand_MW": 115.45578
+    },
+    {
+      "hour": 17,
+      "bus": 8,
+      "demand_MW": 157.4397
+    },
+    {
+      "hour": 17,
+      "bus": 9,
+      "demand_MW": 160.063695
+    },
+    {
+      "hour": 17,
+      "bus": 10,
+      "demand_MW": 178.43166
+    },
+    {
+      "hour": 17,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 13,
+      "demand_MW": 244.03153500000002
+    },
+    {
+      "hour": 17,
+      "bus": 14,
+      "demand_MW": 178.43166
+    },
+    {
+      "hour": 17,
+      "bus": 15,
+      "demand_MW": 291.263445
+    },
+    {
+      "hour": 17,
+      "bus": 16,
+      "demand_MW": 91.839825
+    },
+    {
+      "hour": 17,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 18,
+      "demand_MW": 307.007415
+    },
+    {
+      "hour": 17,
+      "bus": 19,
+      "demand_MW": 167.93568
+    },
+    {
+      "hour": 17,
+      "bus": 20,
+      "demand_MW": 118.07977499999998
+    },
+    {
+      "hour": 17,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 17,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 1,
+      "demand_MW": 100.719
+    },
+    {
+      "hour": 18,
+      "bus": 2,
+      "demand_MW": 90.117
+    },
+    {
+      "hour": 18,
+      "bus": 3,
+      "demand_MW": 166.9815
+    },
+    {
+      "hour": 18,
+      "bus": 4,
+      "demand_MW": 68.91300000000001
+    },
+    {
+      "hour": 18,
+      "bus": 5,
+      "demand_MW": 66.2625
+    },
+    {
+      "hour": 18,
+      "bus": 6,
+      "demand_MW": 127.224
+    },
+    {
+      "hour": 18,
+      "bus": 7,
+      "demand_MW": 116.62200000000001
+    },
+    {
+      "hour": 18,
+      "bus": 8,
+      "demand_MW": 159.03
+    },
+    {
+      "hour": 18,
+      "bus": 9,
+      "demand_MW": 161.6805
+    },
+    {
+      "hour": 18,
+      "bus": 10,
+      "demand_MW": 180.234
+    },
+    {
+      "hour": 18,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 13,
+      "demand_MW": 246.49650000000003
+    },
+    {
+      "hour": 18,
+      "bus": 14,
+      "demand_MW": 180.234
+    },
+    {
+      "hour": 18,
+      "bus": 15,
+      "demand_MW": 294.20550000000003
+    },
+    {
+      "hour": 18,
+      "bus": 16,
+      "demand_MW": 92.76750000000001
+    },
+    {
+      "hour": 18,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 18,
+      "demand_MW": 310.1085
+    },
+    {
+      "hour": 18,
+      "bus": 19,
+      "demand_MW": 169.632
+    },
+    {
+      "hour": 18,
+      "bus": 20,
+      "demand_MW": 119.2725
+    },
+    {
+      "hour": 18,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 18,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 1,
+      "demand_MW": 100.719
+    },
+    {
+      "hour": 19,
+      "bus": 2,
+      "demand_MW": 90.117
+    },
+    {
+      "hour": 19,
+      "bus": 3,
+      "demand_MW": 166.9815
+    },
+    {
+      "hour": 19,
+      "bus": 4,
+      "demand_MW": 68.91300000000001
+    },
+    {
+      "hour": 19,
+      "bus": 5,
+      "demand_MW": 66.2625
+    },
+    {
+      "hour": 19,
+      "bus": 6,
+      "demand_MW": 127.224
+    },
+    {
+      "hour": 19,
+      "bus": 7,
+      "demand_MW": 116.62200000000001
+    },
+    {
+      "hour": 19,
+      "bus": 8,
+      "demand_MW": 159.03
+    },
+    {
+      "hour": 19,
+      "bus": 9,
+      "demand_MW": 161.6805
+    },
+    {
+      "hour": 19,
+      "bus": 10,
+      "demand_MW": 180.234
+    },
+    {
+      "hour": 19,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 13,
+      "demand_MW": 246.49650000000003
+    },
+    {
+      "hour": 19,
+      "bus": 14,
+      "demand_MW": 180.234
+    },
+    {
+      "hour": 19,
+      "bus": 15,
+      "demand_MW": 294.20550000000003
+    },
+    {
+      "hour": 19,
+      "bus": 16,
+      "demand_MW": 92.76750000000001
+    },
+    {
+      "hour": 19,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 18,
+      "demand_MW": 310.1085
+    },
+    {
+      "hour": 19,
+      "bus": 19,
+      "demand_MW": 169.632
+    },
+    {
+      "hour": 19,
+      "bus": 20,
+      "demand_MW": 119.2725
+    },
+    {
+      "hour": 19,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 19,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 1,
+      "demand_MW": 96.69024
+    },
+    {
+      "hour": 20,
+      "bus": 2,
+      "demand_MW": 86.51232
+    },
+    {
+      "hour": 20,
+      "bus": 3,
+      "demand_MW": 160.30224
+    },
+    {
+      "hour": 20,
+      "bus": 4,
+      "demand_MW": 66.15648
+    },
+    {
+      "hour": 20,
+      "bus": 5,
+      "demand_MW": 63.612
+    },
+    {
+      "hour": 20,
+      "bus": 6,
+      "demand_MW": 122.13504
+    },
+    {
+      "hour": 20,
+      "bus": 7,
+      "demand_MW": 111.95712000000002
+    },
+    {
+      "hour": 20,
+      "bus": 8,
+      "demand_MW": 152.6688
+    },
+    {
+      "hour": 20,
+      "bus": 9,
+      "demand_MW": 155.21328
+    },
+    {
+      "hour": 20,
+      "bus": 10,
+      "demand_MW": 173.02464
+    },
+    {
+      "hour": 20,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 13,
+      "demand_MW": 236.63664000000003
+    },
+    {
+      "hour": 20,
+      "bus": 14,
+      "demand_MW": 173.02464
+    },
+    {
+      "hour": 20,
+      "bus": 15,
+      "demand_MW": 282.43728
+    },
+    {
+      "hour": 20,
+      "bus": 16,
+      "demand_MW": 89.05680000000001
+    },
+    {
+      "hour": 20,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 18,
+      "demand_MW": 297.70416
+    },
+    {
+      "hour": 20,
+      "bus": 19,
+      "demand_MW": 162.84672
+    },
+    {
+      "hour": 20,
+      "bus": 20,
+      "demand_MW": 114.5016
+    },
+    {
+      "hour": 20,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 20,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 1,
+      "demand_MW": 91.65428999999999
+    },
+    {
+      "hour": 21,
+      "bus": 2,
+      "demand_MW": 82.00647000000001
+    },
+    {
+      "hour": 21,
+      "bus": 3,
+      "demand_MW": 151.95316499999998
+    },
+    {
+      "hour": 21,
+      "bus": 4,
+      "demand_MW": 62.71083
+    },
+    {
+      "hour": 21,
+      "bus": 5,
+      "demand_MW": 60.298875
+    },
+    {
+      "hour": 21,
+      "bus": 6,
+      "demand_MW": 115.77383999999999
+    },
+    {
+      "hour": 21,
+      "bus": 7,
+      "demand_MW": 106.12602000000001
+    },
+    {
+      "hour": 21,
+      "bus": 8,
+      "demand_MW": 144.7173
+    },
+    {
+      "hour": 21,
+      "bus": 9,
+      "demand_MW": 147.129255
+    },
+    {
+      "hour": 21,
+      "bus": 10,
+      "demand_MW": 164.01294000000001
+    },
+    {
+      "hour": 21,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 13,
+      "demand_MW": 224.31181500000002
+    },
+    {
+      "hour": 21,
+      "bus": 14,
+      "demand_MW": 164.01294000000001
+    },
+    {
+      "hour": 21,
+      "bus": 15,
+      "demand_MW": 267.727005
+    },
+    {
+      "hour": 21,
+      "bus": 16,
+      "demand_MW": 84.418425
+    },
+    {
+      "hour": 21,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 18,
+      "demand_MW": 282.198735
+    },
+    {
+      "hour": 21,
+      "bus": 19,
+      "demand_MW": 154.36512
+    },
+    {
+      "hour": 21,
+      "bus": 20,
+      "demand_MW": 108.53797499999999
+    },
+    {
+      "hour": 21,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 21,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 1,
+      "demand_MW": 83.59676999999999
+    },
+    {
+      "hour": 22,
+      "bus": 2,
+      "demand_MW": 74.79711
+    },
+    {
+      "hour": 22,
+      "bus": 3,
+      "demand_MW": 138.59464499999999
+    },
+    {
+      "hour": 22,
+      "bus": 4,
+      "demand_MW": 57.197790000000005
+    },
+    {
+      "hour": 22,
+      "bus": 5,
+      "demand_MW": 54.997875
+    },
+    {
+      "hour": 22,
+      "bus": 6,
+      "demand_MW": 105.59592
+    },
+    {
+      "hour": 22,
+      "bus": 7,
+      "demand_MW": 96.79626
+    },
+    {
+      "hour": 22,
+      "bus": 8,
+      "demand_MW": 131.9949
+    },
+    {
+      "hour": 22,
+      "bus": 9,
+      "demand_MW": 134.194815
+    },
+    {
+      "hour": 22,
+      "bus": 10,
+      "demand_MW": 149.59422
+    },
+    {
+      "hour": 22,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 13,
+      "demand_MW": 204.59209500000003
+    },
+    {
+      "hour": 22,
+      "bus": 14,
+      "demand_MW": 149.59422
+    },
+    {
+      "hour": 22,
+      "bus": 15,
+      "demand_MW": 244.190565
+    },
+    {
+      "hour": 22,
+      "bus": 16,
+      "demand_MW": 76.99702500000001
+    },
+    {
+      "hour": 22,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 18,
+      "demand_MW": 257.39005499999996
+    },
+    {
+      "hour": 22,
+      "bus": 19,
+      "demand_MW": 140.79456
+    },
+    {
+      "hour": 22,
+      "bus": 20,
+      "demand_MW": 98.996175
+    },
+    {
+      "hour": 22,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 22,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 1,
+      "demand_MW": 73.52486999999999
+    },
+    {
+      "hour": 23,
+      "bus": 2,
+      "demand_MW": 65.78541
+    },
+    {
+      "hour": 23,
+      "bus": 3,
+      "demand_MW": 121.896495
+    },
+    {
+      "hour": 23,
+      "bus": 4,
+      "demand_MW": 50.306490000000004
+    },
+    {
+      "hour": 23,
+      "bus": 5,
+      "demand_MW": 48.371625
+    },
+    {
+      "hour": 23,
+      "bus": 6,
+      "demand_MW": 92.87352
+    },
+    {
+      "hour": 23,
+      "bus": 7,
+      "demand_MW": 85.13406
+    },
+    {
+      "hour": 23,
+      "bus": 8,
+      "demand_MW": 116.0919
+    },
+    {
+      "hour": 23,
+      "bus": 9,
+      "demand_MW": 118.026765
+    },
+    {
+      "hour": 23,
+      "bus": 10,
+      "demand_MW": 131.57082
+    },
+    {
+      "hour": 23,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 13,
+      "demand_MW": 179.94244500000002
+    },
+    {
+      "hour": 23,
+      "bus": 14,
+      "demand_MW": 131.57082
+    },
+    {
+      "hour": 23,
+      "bus": 15,
+      "demand_MW": 214.770015
+    },
+    {
+      "hour": 23,
+      "bus": 16,
+      "demand_MW": 67.720275
+    },
+    {
+      "hour": 23,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 18,
+      "demand_MW": 226.37920499999998
+    },
+    {
+      "hour": 23,
+      "bus": 19,
+      "demand_MW": 123.83136
+    },
+    {
+      "hour": 23,
+      "bus": 20,
+      "demand_MW": 87.068925
+    },
+    {
+      "hour": 23,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 23,
+      "bus": 24,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 1,
+      "demand_MW": 63.45297
+    },
+    {
+      "hour": 24,
+      "bus": 2,
+      "demand_MW": 56.77371000000001
+    },
+    {
+      "hour": 24,
+      "bus": 3,
+      "demand_MW": 105.198345
+    },
+    {
+      "hour": 24,
+      "bus": 4,
+      "demand_MW": 43.41519
+    },
+    {
+      "hour": 24,
+      "bus": 5,
+      "demand_MW": 41.745375
+    },
+    {
+      "hour": 24,
+      "bus": 6,
+      "demand_MW": 80.15112
+    },
+    {
+      "hour": 24,
+      "bus": 7,
+      "demand_MW": 73.47186
+    },
+    {
+      "hour": 24,
+      "bus": 8,
+      "demand_MW": 100.1889
+    },
+    {
+      "hour": 24,
+      "bus": 9,
+      "demand_MW": 101.858715
+    },
+    {
+      "hour": 24,
+      "bus": 10,
+      "demand_MW": 113.54742000000002
+    },
+    {
+      "hour": 24,
+      "bus": 11,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 12,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 13,
+      "demand_MW": 155.29279500000004
+    },
+    {
+      "hour": 24,
+      "bus": 14,
+      "demand_MW": 113.54742000000002
+    },
+    {
+      "hour": 24,
+      "bus": 15,
+      "demand_MW": 185.349465
+    },
+    {
+      "hour": 24,
+      "bus": 16,
+      "demand_MW": 58.44352500000001
+    },
+    {
+      "hour": 24,
+      "bus": 17,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 18,
+      "demand_MW": 195.368355
+    },
+    {
+      "hour": 24,
+      "bus": 19,
+      "demand_MW": 106.86816
+    },
+    {
+      "hour": 24,
+      "bus": 20,
+      "demand_MW": 75.141675
+    },
+    {
+      "hour": 24,
+      "bus": 21,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 22,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 23,
+      "demand_MW": 0.0
+    },
+    {
+      "hour": 24,
+      "bus": 24,
+      "demand_MW": 0.0
+    }
+  ],
+  "lines": [
+    {
+      "from_bus": 1,
+      "to_bus": 2,
+      "reactance_pu": 0.0146,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 11,
+      "to_bus": 13,
+      "reactance_pu": 0.0488,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 1,
+      "to_bus": 3,
+      "reactance_pu": 0.2253,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 11,
+      "to_bus": 14,
+      "reactance_pu": 0.0426,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 1,
+      "to_bus": 5,
+      "reactance_pu": 0.0907,
+      "capacity_MVA": 350.0,
+      "capacity_modified_MW": 350.0
+    },
+    {
+      "from_bus": 12,
+      "to_bus": 13,
+      "reactance_pu": 0.0488,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 2,
+      "to_bus": 4,
+      "reactance_pu": 0.1356,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 12,
+      "to_bus": 23,
+      "reactance_pu": 0.0985,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 2,
+      "to_bus": 6,
+      "reactance_pu": 0.205,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 13,
+      "to_bus": 23,
+      "reactance_pu": 0.0884,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 250.0
+    },
+    {
+      "from_bus": 3,
+      "to_bus": 9,
+      "reactance_pu": 0.1271,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 14,
+      "to_bus": 16,
+      "reactance_pu": 0.0594,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 250.0
+    },
+    {
+      "from_bus": 3,
+      "to_bus": 24,
+      "reactance_pu": 0.084,
+      "capacity_MVA": 400.0,
+      "capacity_modified_MW": 400.0
+    },
+    {
+      "from_bus": 15,
+      "to_bus": 16,
+      "reactance_pu": 0.0172,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 4,
+      "to_bus": 9,
+      "reactance_pu": 0.111,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 15,
+      "to_bus": 21,
+      "reactance_pu": 0.0249,
+      "capacity_MVA": 1000.0,
+      "capacity_modified_MW": 400.0
+    },
+    {
+      "from_bus": 5,
+      "to_bus": 10,
+      "reactance_pu": 0.094,
+      "capacity_MVA": 350.0,
+      "capacity_modified_MW": 350.0
+    },
+    {
+      "from_bus": 15,
+      "to_bus": 24,
+      "reactance_pu": 0.0529,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 6,
+      "to_bus": 10,
+      "reactance_pu": 0.0642,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 16,
+      "to_bus": 17,
+      "reactance_pu": 0.0263,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 7,
+      "to_bus": 8,
+      "reactance_pu": 0.0652,
+      "capacity_MVA": 350.0,
+      "capacity_modified_MW": 350.0
+    },
+    {
+      "from_bus": 16,
+      "to_bus": 19,
+      "reactance_pu": 0.0234,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 8,
+      "to_bus": 9,
+      "reactance_pu": 0.1762,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 17,
+      "to_bus": 18,
+      "reactance_pu": 0.0143,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 8,
+      "to_bus": 10,
+      "reactance_pu": 0.1762,
+      "capacity_MVA": 175.0,
+      "capacity_modified_MW": 175.0
+    },
+    {
+      "from_bus": 17,
+      "to_bus": 22,
+      "reactance_pu": 0.1069,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    },
+    {
+      "from_bus": 9,
+      "to_bus": 11,
+      "reactance_pu": 0.084,
+      "capacity_MVA": 400.0,
+      "capacity_modified_MW": 400.0
+    },
+    {
+      "from_bus": 18,
+      "to_bus": 21,
+      "reactance_pu": 0.0132,
+      "capacity_MVA": 1000.0,
+      "capacity_modified_MW": 1000.0
+    },
+    {
+      "from_bus": 9,
+      "to_bus": 12,
+      "reactance_pu": 0.084,
+      "capacity_MVA": 400.0,
+      "capacity_modified_MW": 400.0
+    },
+    {
+      "from_bus": 19,
+      "to_bus": 20,
+      "reactance_pu": 0.0203,
+      "capacity_MVA": 1000.0,
+      "capacity_modified_MW": 1000.0
+    },
+    {
+      "from_bus": 10,
+      "to_bus": 11,
+      "reactance_pu": 0.084,
+      "capacity_MVA": 400.0,
+      "capacity_modified_MW": 400.0
+    },
+    {
+      "from_bus": 20,
+      "to_bus": 23,
+      "reactance_pu": 0.0112,
+      "capacity_MVA": 1000.0,
+      "capacity_modified_MW": 1000.0
+    },
+    {
+      "from_bus": 10,
+      "to_bus": 12,
+      "reactance_pu": 0.084,
+      "capacity_MVA": 400.0,
+      "capacity_modified_MW": 400.0
+    },
+    {
+      "from_bus": 21,
+      "to_bus": 22,
+      "reactance_pu": 0.0692,
+      "capacity_MVA": 500.0,
+      "capacity_modified_MW": 500.0
+    }
+  ],
+  "wind_farms": [
+    {
+      "wind_id": 1,
+      "bus": 3,
+      "Pmax_MW": 200,
+      "marginal_cost": 0
+    },
+    {
+      "wind_id": 2,
+      "bus": 5,
+      "Pmax_MW": 200,
+      "marginal_cost": 0
+    },
+    {
+      "wind_id": 3,
+      "bus": 7,
+      "Pmax_MW": 200,
+      "marginal_cost": 0
+    },
+    {
+      "wind_id": 4,
+      "bus": 16,
+      "Pmax_MW": 200,
+      "marginal_cost": 0
+    },
+    {
+      "wind_id": 5,
+      "bus": 21,
+      "Pmax_MW": 200,
+      "marginal_cost": 0
+    },
+    {
+      "wind_id": 6,
+      "bus": 23,
+      "Pmax_MW": 200,
+      "marginal_cost": 0
+    }
+  ],
+  "wind_availability_24h": [
+    {
+      "hour": 1,
+      "wind_id": 1,
+      "available_MW": 85.1405997436497
+    },
+    {
+      "hour": 2,
+      "wind_id": 1,
+      "available_MW": 75.57003684583327
+    },
+    {
+      "hour": 3,
+      "wind_id": 1,
+      "available_MW": 44.107317780116624
+    },
+    {
+      "hour": 4,
+      "wind_id": 1,
+      "available_MW": 41.56229984981387
+    },
+    {
+      "hour": 5,
+      "wind_id": 1,
+      "available_MW": 42.38781313863973
+    },
+    {
+      "hour": 6,
+      "wind_id": 1,
+      "available_MW": 52.267654870204694
+    },
+    {
+      "hour": 7,
+      "wind_id": 1,
+      "available_MW": 83.75159940879792
+    },
+    {
+      "hour": 8,
+      "wind_id": 1,
+      "available_MW": 70.64071293146637
+    },
+    {
+      "hour": 9,
+      "wind_id": 1,
+      "available_MW": 113.53779503159976
+    },
+    {
+      "hour": 10,
+      "wind_id": 1,
+      "available_MW": 93.45390064810839
+    },
+    {
+      "hour": 11,
+      "wind_id": 1,
+      "available_MW": 114.92571108349028
+    },
+    {
+      "hour": 12,
+      "wind_id": 1,
+      "available_MW": 130.87221297200585
+    },
+    {
+      "hour": 13,
+      "wind_id": 1,
+      "available_MW": 129.6530868207674
+    },
+    {
+      "hour": 14,
+      "wind_id": 1,
+      "available_MW": 97.70116767233156
+    },
+    {
+      "hour": 15,
+      "wind_id": 1,
+      "available_MW": 115.94317520346496
+    },
+    {
+      "hour": 16,
+      "wind_id": 1,
+      "available_MW": 105.38082897974625
+    },
+    {
+      "hour": 17,
+      "wind_id": 1,
+      "available_MW": 73.21912767117458
+    },
+    {
+      "hour": 18,
+      "wind_id": 1,
+      "available_MW": 86.22840432477345
+    },
+    {
+      "hour": 19,
+      "wind_id": 1,
+      "available_MW": 73.62273293428852
+    },
+    {
+      "hour": 20,
+      "wind_id": 1,
+      "available_MW": 102.92742332381948
+    },
+    {
+      "hour": 21,
+      "wind_id": 1,
+      "available_MW": 101.55840018901286
+    },
+    {
+      "hour": 22,
+      "wind_id": 1,
+      "available_MW": 115.95573542397221
+    },
+    {
+      "hour": 23,
+      "wind_id": 1,
+      "available_MW": 63.94440031240545
+    },
+    {
+      "hour": 24,
+      "wind_id": 1,
+      "available_MW": 75.81503860295756
+    },
+    {
+      "hour": 1,
+      "wind_id": 2,
+      "available_MW": 86.73913844067687
+    },
+    {
+      "hour": 2,
+      "wind_id": 2,
+      "available_MW": 77.43462588109409
+    },
+    {
+      "hour": 3,
+      "wind_id": 2,
+      "available_MW": 44.16581048128916
+    },
+    {
+      "hour": 4,
+      "wind_id": 2,
+      "available_MW": 55.71648435896909
+    },
+    {
+      "hour": 5,
+      "wind_id": 2,
+      "available_MW": 50.76596596658338
+    },
+    {
+      "hour": 6,
+      "wind_id": 2,
+      "available_MW": 40.782234767037764
+    },
+    {
+      "hour": 7,
+      "wind_id": 2,
+      "available_MW": 55.9460147063769
+    },
+    {
+      "hour": 8,
+      "wind_id": 2,
+      "available_MW": 66.80762997366719
+    },
+    {
+      "hour": 9,
+      "wind_id": 2,
+      "available_MW": 108.58306604954109
+    },
+    {
+      "hour": 10,
+      "wind_id": 2,
+      "available_MW": 89.61808765192056
+    },
+    {
+      "hour": 11,
+      "wind_id": 2,
+      "available_MW": 116.15265968289697
+    },
+    {
+      "hour": 12,
+      "wind_id": 2,
+      "available_MW": 128.11049244483746
+    },
+    {
+      "hour": 13,
+      "wind_id": 2,
+      "available_MW": 116.85367873399426
+    },
+    {
+      "hour": 14,
+      "wind_id": 2,
+      "available_MW": 93.3451709377049
+    },
+    {
+      "hour": 15,
+      "wind_id": 2,
+      "available_MW": 124.70900615392404
+    },
+    {
+      "hour": 16,
+      "wind_id": 2,
+      "available_MW": 95.71862508753703
+    },
+    {
+      "hour": 17,
+      "wind_id": 2,
+      "available_MW": 77.0538653336973
+    },
+    {
+      "hour": 18,
+      "wind_id": 2,
+      "available_MW": 83.48834498305254
+    },
+    {
+      "hour": 19,
+      "wind_id": 2,
+      "available_MW": 83.96424517845034
+    },
+    {
+      "hour": 20,
+      "wind_id": 2,
+      "available_MW": 101.25522328260344
+    },
+    {
+      "hour": 21,
+      "wind_id": 2,
+      "available_MW": 97.47882979202757
+    },
+    {
+      "hour": 22,
+      "wind_id": 2,
+      "available_MW": 104.09976045553016
+    },
+    {
+      "hour": 23,
+      "wind_id": 2,
+      "available_MW": 74.2832618076845
+    },
+    {
+      "hour": 24,
+      "wind_id": 2,
+      "available_MW": 89.00389055264985
+    },
+    {
+      "hour": 1,
+      "wind_id": 3,
+      "available_MW": 86.74529453723603
+    },
+    {
+      "hour": 2,
+      "wind_id": 3,
+      "available_MW": 57.842272113864155
+    },
+    {
+      "hour": 3,
+      "wind_id": 3,
+      "available_MW": 43.37320465717213
+    },
+    {
+      "hour": 4,
+      "wind_id": 3,
+      "available_MW": 46.45373198600794
+    },
+    {
+      "hour": 5,
+      "wind_id": 3,
+      "available_MW": 59.74260078944461
+    },
+    {
+      "hour": 6,
+      "wind_id": 3,
+      "available_MW": 49.73020314708203
+    },
+    {
+      "hour": 7,
+      "wind_id": 3,
+      "available_MW": 71.22831014926464
+    },
+    {
+      "hour": 8,
+      "wind_id": 3,
+      "available_MW": 56.48493605511514
+    },
+    {
+      "hour": 9,
+      "wind_id": 3,
+      "available_MW": 99.53314987463582
+    },
+    {
+      "hour": 10,
+      "wind_id": 3,
+      "available_MW": 88.00705797502816
+    },
+    {
+      "hour": 11,
+      "wind_id": 3,
+      "available_MW": 116.94678074208771
+    },
+    {
+      "hour": 12,
+      "wind_id": 3,
+      "available_MW": 126.51863983546887
+    },
+    {
+      "hour": 13,
+      "wind_id": 3,
+      "available_MW": 131.2729786475429
+    },
+    {
+      "hour": 14,
+      "wind_id": 3,
+      "available_MW": 95.2140161331248
+    },
+    {
+      "hour": 15,
+      "wind_id": 3,
+      "available_MW": 123.11939869044532
+    },
+    {
+      "hour": 16,
+      "wind_id": 3,
+      "available_MW": 94.20048683963282
+    },
+    {
+      "hour": 17,
+      "wind_id": 3,
+      "available_MW": 80.92870357693872
+    },
+    {
+      "hour": 18,
+      "wind_id": 3,
+      "available_MW": 80.28665513860656
+    },
+    {
+      "hour": 19,
+      "wind_id": 3,
+      "available_MW": 80.76346404915427
+    },
+    {
+      "hour": 20,
+      "wind_id": 3,
+      "available_MW": 102.76053425747533
+    },
+    {
+      "hour": 21,
+      "wind_id": 3,
+      "available_MW": 91.21529015897828
+    },
+    {
+      "hour": 22,
+      "wind_id": 3,
+      "available_MW": 111.49804388987381
+    },
+    {
+      "hour": 23,
+      "wind_id": 3,
+      "available_MW": 62.69499633591033
+    },
+    {
+      "hour": 24,
+      "wind_id": 3,
+      "available_MW": 89.29582375743223
+    },
+    {
+      "hour": 1,
+      "wind_id": 4,
+      "available_MW": 81.65682095755477
+    },
+    {
+      "hour": 2,
+      "wind_id": 4,
+      "available_MW": 67.33088123242229
+    },
+    {
+      "hour": 3,
+      "wind_id": 4,
+      "available_MW": 40.82309695719001
+    },
+    {
+      "hour": 4,
+      "wind_id": 4,
+      "available_MW": 57.4872988268072
+    },
+    {
+      "hour": 5,
+      "wind_id": 4,
+      "available_MW": 44.57642491424465
+    },
+    {
+      "hour": 6,
+      "wind_id": 4,
+      "available_MW": 49.49124177457432
+    },
+    {
+      "hour": 7,
+      "wind_id": 4,
+      "available_MW": 65.57865441629819
+    },
+    {
+      "hour": 8,
+      "wind_id": 4,
+      "available_MW": 64.26956673923229
+    },
+    {
+      "hour": 9,
+      "wind_id": 4,
+      "available_MW": 107.31322395458687
+    },
+    {
+      "hour": 10,
+      "wind_id": 4,
+      "available_MW": 115.53075990404513
+    },
+    {
+      "hour": 11,
+      "wind_id": 4,
+      "available_MW": 101.61622606751892
+    },
+    {
+      "hour": 12,
+      "wind_id": 4,
+      "available_MW": 137.76275519259633
+    },
+    {
+      "hour": 13,
+      "wind_id": 4,
+      "available_MW": 127.37392425406225
+    },
+    {
+      "hour": 14,
+      "wind_id": 4,
+      "available_MW": 109.36999279851831
+    },
+    {
+      "hour": 15,
+      "wind_id": 4,
+      "available_MW": 118.70524591282448
+    },
+    {
+      "hour": 16,
+      "wind_id": 4,
+      "available_MW": 97.94319761195402
+    },
+    {
+      "hour": 17,
+      "wind_id": 4,
+      "available_MW": 88.73567237713608
+    },
+    {
+      "hour": 18,
+      "wind_id": 4,
+      "available_MW": 86.61628854978743
+    },
+    {
+      "hour": 19,
+      "wind_id": 4,
+      "available_MW": 82.37940499767097
+    },
+    {
+      "hour": 20,
+      "wind_id": 4,
+      "available_MW": 103.94229777553115
+    },
+    {
+      "hour": 21,
+      "wind_id": 4,
+      "available_MW": 98.89873183560304
+    },
+    {
+      "hour": 22,
+      "wind_id": 4,
+      "available_MW": 119.10004806511
+    },
+    {
+      "hour": 23,
+      "wind_id": 4,
+      "available_MW": 66.62120359379189
+    },
+    {
+      "hour": 24,
+      "wind_id": 4,
+      "available_MW": 97.68567367613025
+    },
+    {
+      "hour": 1,
+      "wind_id": 5,
+      "available_MW": 69.28190398236043
+    },
+    {
+      "hour": 2,
+      "wind_id": 5,
+      "available_MW": 69.91711072933121
+    },
+    {
+      "hour": 3,
+      "wind_id": 5,
+      "available_MW": 45.51550491048131
+    },
+    {
+      "hour": 4,
+      "wind_id": 5,
+      "available_MW": 61.48212472457237
+    },
+    {
+      "hour": 5,
+      "wind_id": 5,
+      "available_MW": 55.13242907520627
+    },
+    {
+      "hour": 6,
+      "wind_id": 5,
+      "available_MW": 58.120906648064775
+    },
+    {
+      "hour": 7,
+      "wind_id": 5,
+      "available_MW": 75.06814895064448
+    },
+    {
+      "hour": 8,
+      "wind_id": 5,
+      "available_MW": 68.87244526799816
+    },
+    {
+      "hour": 9,
+      "wind_id": 5,
+      "available_MW": 93.13281290399557
+    },
+    {
+      "hour": 10,
+      "wind_id": 5,
+      "available_MW": 100.13213310105007
+    },
+    {
+      "hour": 11,
+      "wind_id": 5,
+      "available_MW": 109.58719586491326
+    },
+    {
+      "hour": 12,
+      "wind_id": 5,
+      "available_MW": 138.79592638055271
+    },
+    {
+      "hour": 13,
+      "wind_id": 5,
+      "available_MW": 118.21577352835308
+    },
+    {
+      "hour": 14,
+      "wind_id": 5,
+      "available_MW": 100.69448745988538
+    },
+    {
+      "hour": 15,
+      "wind_id": 5,
+      "available_MW": 114.24844252616504
+    },
+    {
+      "hour": 16,
+      "wind_id": 5,
+      "available_MW": 95.63471471927333
+    },
+    {
+      "hour": 17,
+      "wind_id": 5,
+      "available_MW": 79.10084542219174
+    },
+    {
+      "hour": 18,
+      "wind_id": 5,
+      "available_MW": 88.99516803150924
+    },
+    {
+      "hour": 19,
+      "wind_id": 5,
+      "available_MW": 73.6876272001734
+    },
+    {
+      "hour": 20,
+      "wind_id": 5,
+      "available_MW": 113.11753892453329
+    },
+    {
+      "hour": 21,
+      "wind_id": 5,
+      "available_MW": 89.54634236636048
+    },
+    {
+      "hour": 22,
+      "wind_id": 5,
+      "available_MW": 107.15064588829928
+    },
+    {
+      "hour": 23,
+      "wind_id": 5,
+      "available_MW": 55.45853975058852
+    },
+    {
+      "hour": 24,
+      "wind_id": 5,
+      "available_MW": 92.07941547269327
+    },
+    {
+      "hour": 1,
+      "wind_id": 6,
+      "available_MW": 88.68500494241842
+    },
+    {
+      "hour": 2,
+      "wind_id": 6,
+      "available_MW": 73.9977605858365
+    },
+    {
+      "hour": 3,
+      "wind_id": 6,
+      "available_MW": 50.814516886139096
+    },
+    {
+      "hour": 4,
+      "wind_id": 6,
+      "available_MW": 56.3548746275182
+    },
+    {
+      "hour": 5,
+      "wind_id": 6,
+      "available_MW": 45.941339343742875
+    },
+    {
+      "hour": 6,
+      "wind_id": 6,
+      "available_MW": 50.60626606231051
+    },
+    {
+      "hour": 7,
+      "wind_id": 6,
+      "available_MW": 70.06859250023335
+    },
+    {
+      "hour": 8,
+      "wind_id": 6,
+      "available_MW": 67.40410162594678
+    },
+    {
+      "hour": 9,
+      "wind_id": 6,
+      "available_MW": 98.50505293354598
+    },
+    {
+      "hour": 10,
+      "wind_id": 6,
+      "available_MW": 95.82029769138984
+    },
+    {
+      "hour": 11,
+      "wind_id": 6,
+      "available_MW": 120.59102690411333
+    },
+    {
+      "hour": 12,
+      "wind_id": 6,
+      "available_MW": 133.15560779479742
+    },
+    {
+      "hour": 13,
+      "wind_id": 6,
+      "available_MW": 121.15927020974881
+    },
+    {
+      "hour": 14,
+      "wind_id": 6,
+      "available_MW": 95.51027994215286
+    },
+    {
+      "hour": 15,
+      "wind_id": 6,
+      "available_MW": 118.75255581037156
+    },
+    {
+      "hour": 16,
+      "wind_id": 6,
+      "available_MW": 96.08579470757657
+    },
+    {
+      "hour": 17,
+      "wind_id": 6,
+      "available_MW": 86.6950338233573
+    },
+    {
+      "hour": 18,
+      "wind_id": 6,
+      "available_MW": 85.84699658492727
+    },
+    {
+      "hour": 19,
+      "wind_id": 6,
+      "available_MW": 86.89701123638702
+    },
+    {
+      "hour": 20,
+      "wind_id": 6,
+      "available_MW": 95.74933110003782
+    },
+    {
+      "hour": 21,
+      "wind_id": 6,
+      "available_MW": 106.57285825770167
+    },
+    {
+      "hour": 22,
+      "wind_id": 6,
+      "available_MW": 99.89104734955666
+    },
+    {
+      "hour": 23,
+      "wind_id": 6,
+      "available_MW": 71.06417103551813
+    },
+    {
+      "hour": 24,
+      "wind_id": 6,
+      "available_MW": 88.00544644962697
+    }
+  ],
+  "demand_bids_24h": [
+    {
+      "hour": 1,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 1,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 2,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 3,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 4,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 5,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 6,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 7,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 8,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 8,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 9,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 10,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 11,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 12,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 13,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 14,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 15,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 16,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 17,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 18,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 19,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 20,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 240.0
+    },
+    {
+      "hour": 21,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 21,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 22,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 23,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 1,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 2,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 3,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 4,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 5,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 6,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 7,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 8,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 9,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 10,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 11,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 12,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 13,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 14,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 15,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 16,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 17,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 18,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 19,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 20,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 21,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 22,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 23,
+      "bid_price_USD_per_MWh": 180.0
+    },
+    {
+      "hour": 24,
+      "bus": 24,
+      "bid_price_USD_per_MWh": 180.0
+    }
+  ],
+  "notes": {
+    "wind_availability": "synthetic normalized profile (seed=24) scaled to 200 MW each farm",
+    "demand_bids": "synthetic high bid prices: 240 $/MWh peak hours (8-20), 180 otherwise",
+    "line_bottlenecks": "capacity_modified_MW reflects suggested bottlenecks for (15,21),(14,16),(13,23)"
+  }
+}
