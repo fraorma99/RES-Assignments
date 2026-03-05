@@ -126,3 +126,45 @@ class Step1MarketClearing:
             self._save_results()
         else:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
+        
+
+class Step2InputData:
+    """
+    Copper-plate market clearing over 24 hours with:
+    - conventional generators (marginal cost bids)
+    - wind farms (zero marginal cost, limited by hourly availability)
+    - elastic demand at buses (hourly bid price/quantity)
+    - energy storage (pch/pdis/e with dynamics, zero bids)
+    """
+
+    def __init__(
+        self,
+        GENERATORS: list,
+        WINDS: list,
+        LOAD_BUSES: list,
+        generator_cost: dict,
+        generator_pmax: dict,
+        wind_avail_t: dict,
+        demand_pmax_t: dict,
+        demand_bid_t: dict,
+        hours: int
+    ):
+        self.GENERATORS = GENERATORS
+        self.WINDS = WINDS
+        self.LOAD_BUSES = LOAD_BUSES
+
+        self.generator_cost = generator_cost
+        self.generator_pmax = generator_pmax
+
+        self.wind_avail_t = wind_avail_t
+
+        self.demand_pmax_t = demand_pmax_t
+        self.demand_bid_t = demand_bid_t
+        self.hours = hours
+        
+        # Storage
+        self.P_ch = 400  # We consider that we cover approximately 35% of the demand with storage during peak load hours.
+        self.P_dis = 400
+        self.E = 800
+        self.eta_ch = 0.8
+        self.eta_dis = 0.85
