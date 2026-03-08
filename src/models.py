@@ -166,12 +166,12 @@ class Step2InputData:
         self.hours = hours
         
         # Storage
-        self.P_ch = 500  # We consider that we cover approximately 12% of the demand with storage during peak load hours.
-        self.P_dis = 500
-        self.E = 2500
+        self.P_ch = 400  # We consider that we cover approximately 12% of the demand with storage during peak load hours.
+        self.P_dis = 400
+        self.E = 1600
         # As stated in ESR report, we consider a round-trip efficiency close to 0.8 which is a reasonable assumption for Pump Hydro Storage.
         self.eta_ch = 0.9
-        self.eta_dis = 0.95
+        self.eta_dis = 0.93
 
 class Step2MarketClearing:
     """
