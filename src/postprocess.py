@@ -167,3 +167,233 @@ def step2_build_summary_tables(step2_results, input_data):
     }
 
     return df_gen, df_wind, df_dem, df_storage, df_prices, totals
+
+# ========================
+# STEP 3A: NODAL RESULTS
+# ========================
+
+def step3_build_summary_tables(step3_results, input_data):
+    """
+    Returns:
+    - df_gen: generator dispatch, nodal price, profit
+    - df_wind: wind dispatch, nodal price, profit
+    - df_dem: demand served, nodal price, utility
+    - df_bus: nodal injections, angles, prices
+    - df_line: line flows and congestion status
+    - totals: dict with aggregate quantities
+    """
+
+    gen_rows = []
+    for g in input_data.GENERATORS:
+        bus = input_data.generator_bus[g]
+        pg = step3_results.pG[g]
+        cg = input_data.generator_cost[g]
+        price = step3_results.nodal_prices[bus]
+
+        gen_rows.append({
+            "generator": g,
+            "bus": bus,
+            "p_MW": pg,
+            "marginal_cost": cg,
+            "nodal_price": price,
+            "profit": (price - cg) * pg
+        })
+    df_gen = pd.DataFrame(gen_rows).sort_values(["bus", "generator"])
+
+    wind_rows = []
+    for w in input_data.WINDS:
+        bus = input_data.wind_bus[w]
+        pw = step3_results.pW[w]
+        price = step3_results.nodal_prices[bus]
+
+        wind_rows.append({
+            "wind": w,
+            "bus": bus,
+            "p_MW": pw,
+            "nodal_price": price,
+            "profit": price * pw
+        })
+    df_wind = pd.DataFrame(wind_rows).sort_values(["bus", "wind"])
+
+    dem_rows = []
+    for n in input_data.LOAD_BUSES:
+        dn = step3_results.d[n]
+        bid = input_data.demand_bid[n]
+        price = step3_results.nodal_prices[n]
+
+        dem_rows.append({
+            "bus": n,
+            "d_MW": dn,
+            "bid_price": bid,
+            "nodal_price": price,
+            "utility": (bid - price) * dn
+        })
+    df_dem = pd.DataFrame(dem_rows).sort_values("bus")
+
+    bus_rows = []
+    for n in input_data.BUSES:
+        gen_n = sum(step3_results.pG[g] for g in input_data.GENERATORS if input_data.generator_bus[g] == n)
+        wind_n = sum(step3_results.pW[w] for w in input_data.WINDS if input_data.wind_bus[w] == n)
+        dem_n = step3_results.d[n] if n in input_data.LOAD_BUSES else 0.0
+
+        bus_rows.append({
+            "bus": n,
+            "theta_rad": step3_results.theta[n],
+            "nodal_price": step3_results.nodal_prices[n],
+            "gen_MW": gen_n,
+            "wind_MW": wind_n,
+            "demand_MW": dem_n,
+            "net_injection_MW": gen_n + wind_n - dem_n
+        })
+    df_bus = pd.DataFrame(bus_rows).sort_values("bus")
+
+    line_rows = []
+    tol = 1e-5
+    for l in input_data.LINES:
+        flow = step3_results.f[l]
+        fmax = input_data.line_fmax[l]
+
+        line_rows.append({
+            "line": l,
+            "from_bus": input_data.line_from[l],
+            "to_bus": input_data.line_to[l],
+            "B": input_data.line_B[l],
+            "flow_MW": flow,
+            "Fmax_MW": fmax,
+            "loading_pct": 100 * abs(flow) / fmax if fmax > 0 else None,
+            "congested": abs(abs(flow) - fmax) <= tol
+        })
+    df_line = pd.DataFrame(line_rows).sort_values("line")
+
+    total_operating_cost = (df_gen["marginal_cost"] * df_gen["p_MW"]).sum()
+
+    totals = {
+        "objective_welfare": step3_results.objective_value,
+        "total_operating_cost": total_operating_cost,
+        "total_gen_MW": df_gen["p_MW"].sum(),
+        "total_wind_MW": df_wind["p_MW"].sum(),
+        "total_demand_served_MW": df_dem["d_MW"].sum(),
+        "total_gen_profit": df_gen["profit"].sum(),
+        "total_wind_profit": df_wind["profit"].sum(),
+        "total_demand_utility": df_dem["utility"].sum(),
+        "min_nodal_price": df_bus["nodal_price"].min(),
+        "max_nodal_price": df_bus["nodal_price"].max(),
+        "price_spread": df_bus["nodal_price"].max() - df_bus["nodal_price"].min(),
+        "n_congested_lines": int(df_line["congested"].sum()),
+    }
+
+    return df_gen, df_wind, df_dem, df_bus, df_line, totals
+
+# ========================
+# STEP 3B: ZONAL RESULTS
+# ========================
+
+def step3_zonal_build_summary_tables(step3z_results, input_data):
+    """
+    Returns:
+    - df_gen: generator dispatch, zonal price, profit
+    - df_wind: wind dispatch, zonal price, profit
+    - df_dem: demand served, zonal price, utility
+    - df_zone: zone balances and prices
+    - df_transfer: interzonal transfer results
+    - totals: dict with aggregate quantities
+    """
+
+    gen_rows = []
+    for g in input_data.GENERATORS:
+        bus = input_data.generator_bus[g]
+        zone = input_data.BUS_ZONE[bus]
+        pg = step3z_results.pG[g]
+        cg = input_data.generator_cost[g]
+        price = step3z_results.zonal_prices[zone]
+
+        gen_rows.append({
+            "generator": g,
+            "bus": bus,
+            "zone": zone,
+            "p_MW": pg,
+            "marginal_cost": cg,
+            "zonal_price": price,
+            "profit": (price - cg) * pg
+        })
+    df_gen = pd.DataFrame(gen_rows).sort_values(["zone", "bus", "generator"])
+
+    wind_rows = []
+    for w in input_data.WINDS:
+        bus = input_data.wind_bus[w]
+        zone = input_data.BUS_ZONE[bus]
+        pw = step3z_results.pW[w]
+        price = step3z_results.zonal_prices[zone]
+
+        wind_rows.append({
+            "wind": w,
+            "bus": bus,
+            "zone": zone,
+            "p_MW": pw,
+            "zonal_price": price,
+            "profit": price * pw
+        })
+    df_wind = pd.DataFrame(wind_rows).sort_values(["zone", "bus", "wind"])
+
+    dem_rows = []
+    for n in input_data.LOAD_BUSES:
+        zone = input_data.BUS_ZONE[n]
+        dn = step3z_results.d[n]
+        bid = input_data.demand_bid[n]
+        price = step3z_results.zonal_prices[zone]
+
+        dem_rows.append({
+            "bus": n,
+            "zone": zone,
+            "d_MW": dn,
+            "bid_price": bid,
+            "zonal_price": price,
+            "utility": (bid - price) * dn
+        })
+    df_dem = pd.DataFrame(dem_rows).sort_values(["zone", "bus"])
+
+    zone_rows = []
+    for z in input_data.ZONES:
+        gen_z = sum(step3z_results.pG[g] for g in input_data.GENERATORS if input_data.BUS_ZONE[input_data.generator_bus[g]] == z)
+        wind_z = sum(step3z_results.pW[w] for w in input_data.WINDS if input_data.BUS_ZONE[input_data.wind_bus[w]] == z)
+        dem_z = sum(step3z_results.d[n] for n in input_data.LOAD_BUSES if input_data.BUS_ZONE[n] == z)
+
+        net_export = sum(
+            step3z_results.T[k] if k[0] == z else -step3z_results.T[k]
+            for k in input_data.INTERFACES if z in k
+        )
+
+        zone_rows.append({
+            "zone": z,
+            "zonal_price": step3z_results.zonal_prices[z],
+            "gen_MW": gen_z,
+            "wind_MW": wind_z,
+            "demand_MW": dem_z,
+            "net_export_MW": net_export
+        })
+    df_zone = pd.DataFrame(zone_rows).sort_values("zone")
+
+    transfer_rows = []
+    for k in input_data.INTERFACES:
+        transfer_rows.append({
+            "interface": f"{k[0]}->{k[1]}",
+            "transfer_MW": step3z_results.T[k],
+            "ATC_MW": input_data.atc[k],
+            "loading_pct": 100 * abs(step3z_results.T[k]) / input_data.atc[k] if input_data.atc[k] > 0 else None
+        })
+    df_transfer = pd.DataFrame(transfer_rows)
+
+    total_operating_cost = (df_gen["marginal_cost"] * df_gen["p_MW"]).sum()
+
+    totals = {
+        "objective_welfare": step3z_results.objective_value,
+        "total_operating_cost": total_operating_cost,
+        "total_gen_MW": df_gen["p_MW"].sum(),
+        "total_wind_MW": df_wind["p_MW"].sum(),
+        "total_demand_served_MW": df_dem["d_MW"].sum(),
+        "total_gen_profit": df_gen["profit"].sum(),
+        "total_wind_profit": df_wind["profit"].sum(),
+        "total_demand_utility": df_dem["utility"].sum(),
+    }
+
+    return df_gen, df_wind, df_dem, df_zone, df_transfer, totals
