@@ -1,5 +1,6 @@
 import gurobipy as gp
 from gurobipy import GRB
+from typing import List
 
 class Expando(object):
     """A class which can have attributes set"""
@@ -150,7 +151,12 @@ class Step2InputData:
         wind_avail_t: dict,
         demand_pmax_t: dict,
         demand_bid_t: dict,
-        hours: int
+        hours: List[int],
+        P_ch: float = 400.0,
+        P_dis: float = 400.0,
+        E: float = 1600.0,
+        eta_ch: float = 0.9,
+        eta_dis: float = 0.93,
     ):
         self.GENERATORS = GENERATORS
         self.WINDS = WINDS
@@ -166,18 +172,17 @@ class Step2InputData:
         self.hours = hours
         
         # Storage
-        self.P_ch = 400  # We consider that we cover approximately 12% of the demand with storage during peak load hours.
-        self.P_dis = 400
-        self.E = 1600
-        # As stated in ESR report, we consider a round-trip efficiency close to 0.8 which is a reasonable assumption for Pump Hydro Storage.
-        self.eta_ch = 0.9
-        self.eta_dis = 0.93
+        self.P_ch = P_ch
+        self.P_dis = P_dis
+        self.E = E
+        self.eta_ch = eta_ch
+        self.eta_dis = eta_dis
 
 class Step2MarketClearing:
     """
     Copper-plate market clearing over 24 hours with storage:
     max sum_t [sum_n bid_tn * d_tn - sum_g c_g * pG_tg]
-    s.t. balance_t: sum_g pG_tg + sum_w pW_tw + pch_t - pdis_t = sum_n d_tn  ∀t
+    s.t. balance_t: sum_g pG_tg + sum_w pW_tw - pch_t + pdis_t - sum_n d_tn = 0  ∀t
          storage dyn: e_t = e_{t-1} + η_ch pch_t - pdis_t / η_dis  ∀t
          bounds ∀t,g,w,n
     """      
@@ -251,6 +256,12 @@ class Step2MarketClearing:
                 self.variables.pdis[t] / self.data.eta_dis,
                 name=f'dyn_t{t}'
             )
+            
+        # Final SOC constraint: e_T = 0 (cyclic, since e_0 = 0)
+        self.constraints.final_soc = self.model.addLConstr(
+            self.variables.e[T[-1]] == 0,
+            name='final_soc'
+        )
 
     def _build_objective_function(self):
         T = self.data.hours
