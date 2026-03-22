@@ -714,10 +714,385 @@ class Step3ZonalMarketClearing:
         self.results.zonal_prices = {
             z: -self.results.zone_balance_duals[z] for z in self.data.ZONES
         }
+        
+    def run(self):
+        self.model.optimize()
+        if self.model.status == GRB.OPTIMAL:
+            self._save_results()
+        else:
+            raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
+# ========================
+# STEP 5: BALANCING MARKET
+# ========================
+# Append this block to models.py
+
+
+class Step5InputData:
+
+
+    def __init__(
+        self,
+        GENERATORS_UP: list,
+        GENERATORS_DN: list,
+        up_price: dict,
+        dn_price: dict,
+        up_cap: dict,
+        dn_cap: dict,
+        system_imbalance: float,
+        load_curtailment_cost: float = 500.0,
+    ):
+        self.GENERATORS_UP = GENERATORS_UP
+        self.GENERATORS_DN = GENERATORS_DN
+        self.up_price = up_price
+        self.dn_price = dn_price
+        self.up_cap = up_cap
+        self.dn_cap = dn_cap
+        self.system_imbalance = system_imbalance
+        self.load_curtailment_cost = load_curtailment_cost
+
+
+class Step5BalancingMarket:
+    """
+    Minimize cost of balancing:
+
+        min  sum_g [up_price_g * r_up_g]
+           - sum_g [dn_price_g * r_dn_g]
+           + LC_cost * LC
+
+    s.t.
+        sum_g r_up_g - sum_g r_dn_g + LC = system_imbalance   (balance)
+        0 <= r_up_g <= up_cap_g       ∀g in GENERATORS_UP
+        0 <= r_dn_g <= dn_cap_g       ∀g in GENERATORS_DN
+        0 <= LC
+
+    The dual of the balance constraint (Pi) gives the balancing price λ_B.
+    For a minimisation problem: λ_B = +Pi  (increasing shortage by 1 MW
+    raises cost by exactly the marginal offer price of the last activated unit).
+    """
+
+    def __init__(self, input_data: Step5InputData, output_flag: int = 0):
+        self.data = input_data
+        self.variables = Expando()
+        self.constraints = Expando()
+        self.results = Expando()
+        self._build_model(output_flag=output_flag)
+
+    def _build_variables(self):
+        d = self.data
+        self.variables.r_up = {
+            g: self.model.addVar(lb=0, ub=d.up_cap[g], name=f'r_up_{g}')
+            for g in d.GENERATORS_UP
+        }
+        self.variables.r_dn = {
+            g: self.model.addVar(lb=0, ub=d.dn_cap[g], name=f'r_dn_{g}')
+            for g in d.GENERATORS_DN
+        }
+        self.variables.LC = self.model.addVar(lb=0, ub=GRB.INFINITY, name='load_curtailment')
+
+    def _build_constraints(self):
+        d = self.data
+        self.constraints.balance = self.model.addLConstr(
+            gp.quicksum(self.variables.r_up[g] for g in d.GENERATORS_UP)
+            - gp.quicksum(self.variables.r_dn[g] for g in d.GENERATORS_DN)
+            + self.variables.LC
+            == d.system_imbalance,
+            name='Balancing_balance'
+        )
+
+    def _build_objective_function(self):
+        d = self.data
+        cost = (
+            gp.quicksum(d.up_price[g] * self.variables.r_up[g] for g in d.GENERATORS_UP)
+            - gp.quicksum(d.dn_price[g] * self.variables.r_dn[g] for g in d.GENERATORS_DN)
+            + d.load_curtailment_cost * self.variables.LC
+        )
+        self.model.setObjective(cost, GRB.MINIMIZE)
+
+    def _build_model(self, output_flag: int = 0):
+        self.model = gp.Model(name='Step 5 - Balancing Market')
+        self.model.setParam('OutputFlag', output_flag)
+        self._build_variables()
+        self._build_constraints()
+        self._build_objective_function()
+        self.model.update()
+
+    def _save_results(self):
+        d = self.data
+        self.results.r_up = {g: self.variables.r_up[g].X for g in d.GENERATORS_UP}
+        self.results.r_dn = {g: self.variables.r_dn[g].X for g in d.GENERATORS_DN}
+        self.results.LC = self.variables.LC.X
+        self.results.objective_value = self.model.ObjVal
+        # For minimisation: λ_B = +Pi (not -Pi as in the welfare-max steps)
+        self.results.balance_dual = self.constraints.balance.Pi
+        self.results.balancing_price = self.results.balance_dual
 
     def run(self):
         self.model.optimize()
         if self.model.status == GRB.OPTIMAL:
             self._save_results()
         else:
-            raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")        
+            raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
+
+
+# ========================
+# STEP 6: RESERVE MARKET (European Sequential)
+# ========================
+
+# ──────────────────────────────────────────────────────────────────────────────
+# STAGE 1: RESERVE MARKET
+# ──────────────────────────────────────────────────────────────────────────────
+
+class Step6aInputData:
+    """
+    Reserve market input data.
+
+    The TSO minimizes reserve procurement cost subject to meeting
+    system-wide upward and downward reserve requirements.
+
+    Reserve offer prices:
+        up_res_price[g]  = 0.25 * c_g   $/MW
+        dn_res_price[g]  = 0.40 * c_g   $/MW
+
+    Reserve capacity limits per generator:
+        R_up_max[g]  = 0.80 * (Pmax_g - pG_DA_step1_g)
+        R_dn_max[g]  = 0.20 * pG_DA_step1_g
+
+    System requirements:
+        R_up_req  = 0.15 * total_demand
+        R_dn_req  = 0.10 * total_demand
+    """
+
+    def __init__(
+        self,
+        GENERATORS: list,
+        GENERATORS_UP_RES: list,   # subset offering upward reserve
+        GENERATORS_DN_RES: list,   # subset offering downward reserve
+        up_res_price: dict,        # g -> $/MW
+        dn_res_price: dict,        # g -> $/MW
+        R_up_max: dict,            # g -> MW
+        R_dn_max: dict,            # g -> MW
+        R_up_req: float,           # MW system upward requirement
+        R_dn_req: float,           # MW system downward requirement
+    ):
+        self.GENERATORS = GENERATORS
+        self.GENERATORS_UP_RES = GENERATORS_UP_RES
+        self.GENERATORS_DN_RES = GENERATORS_DN_RES
+        self.up_res_price = up_res_price
+        self.dn_res_price = dn_res_price
+        self.R_up_max = R_up_max
+        self.R_dn_max = R_dn_max
+        self.R_up_req = R_up_req
+        self.R_dn_req = R_dn_req
+
+
+class Step6aReserveMarket:
+    """
+    Stage 1: Reserve market clearing.
+
+    min  Σ_g [ up_res_price_g * r_up_g + dn_res_price_g * r_dn_g ]
+
+    s.t.
+        Σ_g r_up_g  = R_up_req           (upward reserve requirement)   → dual: λ_up_res
+        Σ_g r_dn_g  = R_dn_req           (downward reserve requirement) → dual: λ_dn_res
+        0 ≤ r_up_g ≤ R_up_max_g          ∀g in GENERATORS_UP_RES
+        0 ≤ r_dn_g ≤ R_dn_max_g          ∀g in GENERATORS_DN_RES
+
+    Reserve prices = +Pi of requirements constraints (minimization problem).
+    """
+
+    def __init__(self, input_data: Step6aInputData, output_flag: int = 0):
+        self.data = input_data
+        self.variables = Expando()
+        self.constraints = Expando()
+        self.results = Expando()
+        self._build_model(output_flag=output_flag)
+
+    def _build_variables(self):
+        d = self.data
+        self.variables.r_up = {
+            g: self.model.addVar(lb=0, ub=d.R_up_max[g], name=f'r_up_{g}')
+            for g in d.GENERATORS_UP_RES
+        }
+        self.variables.r_dn = {
+            g: self.model.addVar(lb=0, ub=d.R_dn_max[g], name=f'r_dn_{g}')
+            for g in d.GENERATORS_DN_RES
+        }
+
+    def _build_constraints(self):
+        d = self.data
+        self.constraints.up_req = self.model.addLConstr(
+            gp.quicksum(self.variables.r_up[g] for g in d.GENERATORS_UP_RES)
+            == d.R_up_req,
+            name='Upward_reserve_requirement'
+        )
+        self.constraints.dn_req = self.model.addLConstr(
+            gp.quicksum(self.variables.r_dn[g] for g in d.GENERATORS_DN_RES)
+            == d.R_dn_req,
+            name='Downward_reserve_requirement'
+        )
+
+    def _build_objective_function(self):
+        d = self.data
+        cost = (
+            gp.quicksum(d.up_res_price[g] * self.variables.r_up[g]
+                        for g in d.GENERATORS_UP_RES)
+            + gp.quicksum(d.dn_res_price[g] * self.variables.r_dn[g]
+                          for g in d.GENERATORS_DN_RES)
+        )
+        self.model.setObjective(cost, GRB.MINIMIZE)
+
+    def _build_model(self, output_flag: int = 0):
+        self.model = gp.Model(name='Step 6a - Reserve Market')
+        self.model.setParam('OutputFlag', output_flag)
+        self._build_variables()
+        self._build_constraints()
+        self._build_objective_function()
+        self.model.update()
+
+    def _save_results(self):
+        d = self.data
+        self.results.r_up = {g: self.variables.r_up[g].X for g in d.GENERATORS_UP_RES}
+        self.results.r_dn = {g: self.variables.r_dn[g].X for g in d.GENERATORS_DN_RES}
+        self.results.objective_value = self.model.ObjVal  # total reserve procurement cost
+
+        # Reserve prices: +Pi for minimization problem
+        self.results.up_res_price_dual = self.constraints.up_req.Pi
+        self.results.dn_res_price_dual = self.constraints.dn_req.Pi
+        self.results.lambda_up_res = self.results.up_res_price_dual
+        self.results.lambda_dn_res = self.results.dn_res_price_dual
+
+    def run(self):
+        self.model.optimize()
+        if self.model.status == GRB.OPTIMAL:
+            self._save_results()
+        else:
+            raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# STAGE 2: DAY-AHEAD MARKET WITH RESERVE CONSTRAINTS
+# ──────────────────────────────────────────────────────────────────────────────
+
+class Step6bInputData:
+    """
+    Day-ahead market input data for Stage 2, incorporating reserve commitments.
+
+    Identical to Step1InputData but with two extra constraints per generator:
+        pG_g <= Pmax_g - r_up_g   (upward reserve headroom preserved)
+        pG_g >= r_dn_g            (downward reserve providers must be online)
+
+    r_up and r_dn come from Step6aReserveMarket results.
+    """
+
+    def __init__(
+        self,
+        GENERATORS: list,
+        WINDS: list,
+        LOAD_BUSES: list,
+        generator_cost: dict,
+        generator_pmax: dict,
+        wind_avail: dict,
+        demand_pmax: dict,
+        demand_bid: dict,
+        r_up: dict,   # g -> MW committed upward reserve (0 if not a provider)
+        r_dn: dict,   # g -> MW committed downward reserve (0 if not a provider)
+    ):
+        self.GENERATORS = GENERATORS
+        self.WINDS = WINDS
+        self.LOAD_BUSES = LOAD_BUSES
+        self.generator_cost = generator_cost
+        self.generator_pmax = generator_pmax
+        self.wind_avail = wind_avail
+        self.demand_pmax = demand_pmax
+        self.demand_bid = demand_bid
+        self.r_up = r_up
+        self.r_dn = r_dn
+
+
+class Step6bDAMarket:
+    """
+    Stage 2: Day-ahead market clearing after reserve commitments.
+
+    Identical objective to Step 1 (maximize social welfare) but with
+    tighter generator bounds reflecting reserve commitments:
+
+    max  Σ_n bid_n * d_n  -  Σ_g c_g * pG_g
+
+    s.t.
+        r_dn_g  <=  pG_g  <=  Pmax_g - r_up_g    ∀g
+        0       <=  pW_w  <=  Wavail_w             ∀w
+        0       <=  d_n   <=  Dmax_n               ∀n
+        Σ_g pG_g + Σ_w pW_w - Σ_n d_n = 0         (balance → market price = -Pi)
+
+    The upper bound Pmax_g - r_up_g ensures headroom for upward reserve.
+    The lower bound r_dn_g ensures the generator is online for downward reserve.
+    """
+
+    def __init__(self, input_data: Step6bInputData, output_flag: int = 0):
+        self.data = input_data
+        self.variables = Expando()
+        self.constraints = Expando()
+        self.results = Expando()
+        self._build_model(output_flag=output_flag)
+
+    def _build_variables(self):
+        d = self.data
+        self.variables.pG = {
+            g: self.model.addVar(
+                lb=d.r_dn.get(g, 0.0),                    # must be online if downward reserve provider
+                ub=d.generator_pmax[g] - d.r_up.get(g, 0.0),  # headroom reserved for upward
+                name=f'Gen production {g}'
+            )
+            for g in d.GENERATORS
+        }
+        self.variables.pW = {
+            w: self.model.addVar(lb=0, ub=d.wind_avail[w], name=f'Wind production {w}')
+            for w in d.WINDS
+        }
+        self.variables.d = {
+            n: self.model.addVar(lb=0, ub=d.demand_pmax[n], name=f'Demand served at bus {n}')
+            for n in d.LOAD_BUSES
+        }
+
+    def _build_constraints(self):
+        d = self.data
+        self.constraints.balance = self.model.addLConstr(
+            gp.quicksum(self.variables.pG[g] for g in d.GENERATORS)
+            + gp.quicksum(self.variables.pW[w] for w in d.WINDS)
+            - gp.quicksum(self.variables.d[n] for n in d.LOAD_BUSES),
+            GRB.EQUAL,
+            0,
+            name='Balance constraint'
+        )
+
+    def _build_objective_function(self):
+        d = self.data
+        welfare = (
+            gp.quicksum(d.demand_bid[n] * self.variables.d[n] for n in d.LOAD_BUSES)
+            - gp.quicksum(d.generator_cost[g] * self.variables.pG[g] for g in d.GENERATORS)
+        )
+        self.model.setObjective(welfare, GRB.MAXIMIZE)
+
+    def _build_model(self, output_flag: int = 0):
+        self.model = gp.Model(name='Step 6b - DA Market with Reserve Constraints')
+        self.model.setParam('OutputFlag', output_flag)
+        self._build_variables()
+        self._build_constraints()
+        self._build_objective_function()
+        self.model.update()
+
+    def _save_results(self):
+        d = self.data
+        self.results.objective_value = self.model.ObjVal
+        self.results.pG = {g: self.variables.pG[g].X for g in d.GENERATORS}
+        self.results.pW = {w: self.variables.pW[w].X for w in d.WINDS}
+        self.results.d  = {n: self.variables.d[n].X  for n in d.LOAD_BUSES}
+        self.results.balance_dual = self.constraints.balance.Pi
+        self.results.market_price = -self.results.balance_dual
+
+    def run(self):
+        self.model.optimize()
+        if self.model.status == GRB.OPTIMAL:
+            self._save_results()
+        else:
+            raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
