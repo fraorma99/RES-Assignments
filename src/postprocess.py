@@ -450,20 +450,18 @@ def step5_build_summary_tables(
         da_profit = (λ_DA - c_g) * pG_DA
 
         if g == failed_generator:
-            # G8: BRP — was scheduled pG_DA but delivered 0 → deviation = -pG_DA
             r_up_g, r_dn_g = 0.0, 0.0
-            deviation = -pG_DA  # large negative deviation, causes shortage
+            deviation = -pG_DA
             role = "BRP (failed)"
 
-            # One-price: deviation settled at λ_B
-            # G8 must buy back its missing energy at λ_B (it already sold it at λ_DA in DA)
-            # Net effect: DA revenue was λ_DA * pG_DA, but it delivered nothing.
-            # Under one-price it owes λ_B * pG_DA back → total = (λ_DA - λ_B) * pG_DA
-            settlement_1p = λ_B * deviation        # negative: penalty
-            settlement_2p = λ_B * deviation        # system is short, Δ<0 → same as 1-price
+            # G8 doesn't produce → saves production cost c_g * pG_DA
+            # but must buy back missing energy at λ_B
+            cost_savings = c_g * pG_DA
+            settlement_1p = λ_B * deviation     # cash penalty
+            settlement_2p = λ_B * deviation     # system is short, Δ<0 → same
 
-            balancing_profit_1p = settlement_1p
-            balancing_profit_2p = settlement_2p
+            balancing_profit_1p = settlement_1p + cost_savings
+            balancing_profit_2p = settlement_2p + cost_savings
             total_profit_1p = da_profit + balancing_profit_1p
             total_profit_2p = da_profit + balancing_profit_2p
 
