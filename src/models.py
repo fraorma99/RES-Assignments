@@ -128,9 +128,8 @@ class Step1MarketClearing:
         else:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
         
-# ========================
+
 # STEP 2: 24-HOUR DISPATCH
-# ========================
 
 class Step2InputData:
     """
@@ -306,9 +305,9 @@ class Step2MarketClearing:
         else:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
   
-# ========================
+
+
 # STEP 3A: 1-HOUR NODAL MARKET CLEARING
-# ========================
 
 class Step3InputData:
     """
@@ -561,9 +560,9 @@ class Step3MarketClearing:
         else:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
         
-# ========================
+
+
 # STEP 3B: 1-HOUR ZONAL MARKET CLEARING
-# ========================
 
 class Step3ZonalInputData:
     """
@@ -721,9 +720,11 @@ class Step3ZonalMarketClearing:
             self._save_results()
         else:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
-# ========================
+
+
+
 # STEP 5: BALANCING MARKET
-# ========================
+
 # Append this block to models.py
 
 
@@ -834,13 +835,12 @@ class Step5BalancingMarket:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
 
 
-# ========================
-# STEP 6: RESERVE MARKET (European Sequential)
-# ========================
 
-# ──────────────────────────────────────────────────────────────────────────────
+# STEP 6: RESERVE MARKET (European Sequential)
+
+
+
 # STAGE 1: RESERVE MARKET
-# ──────────────────────────────────────────────────────────────────────────────
 
 class Step6aInputData:
     """
@@ -969,9 +969,7 @@ class Step6aReserveMarket:
             raise RuntimeError(f"Optimization of {self.model.ModelName} was not successful")
 
 
-# ──────────────────────────────────────────────────────────────────────────────
 # STAGE 2: DAY-AHEAD MARKET WITH RESERVE CONSTRAINTS
-# ──────────────────────────────────────────────────────────────────────────────
 
 class Step6bInputData:
     """

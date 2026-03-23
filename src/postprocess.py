@@ -59,9 +59,8 @@ def step1_build_summary_tables(step1_results, input_data):
 
     return df_gen, df_wind, df_dem, totals
 
-# ========================
 # STEP 2: 24-HOUR DISPATCH RESULTS
-# ========================
+
 
 def step2_build_summary_tables(step2_results, input_data):
     """
@@ -168,9 +167,8 @@ def step2_build_summary_tables(step2_results, input_data):
 
     return df_gen, df_wind, df_dem, df_storage, df_prices, totals
 
-# ========================
+
 # STEP 3A: NODAL RESULTS
-# ========================
 
 def step3_build_summary_tables(step3_results, input_data):
     """
@@ -284,9 +282,9 @@ def step3_build_summary_tables(step3_results, input_data):
 
     return df_gen, df_wind, df_dem, df_bus, df_line, totals
 
-# ========================
+
 # STEP 3B: ZONAL RESULTS
-# ========================
+
 
 def step3_zonal_build_summary_tables(step3z_results, input_data):
     """
@@ -397,9 +395,10 @@ def step3_zonal_build_summary_tables(step3z_results, input_data):
     }
 
     return df_gen, df_wind, df_dem, df_zone, df_transfer, totals
-# ========================
+
+
 # STEP 5: BALANCING MARKET RESULTS
-# ========================
+
 # Append this block to postprocess.py
 
 
@@ -422,7 +421,7 @@ def step5_build_summary_tables(
     BSP_DN = {g for g in step5_input.GENERATORS_DN if step5_results.r_dn.get(g, 0.0) > 1e-6}
     BSPS   = BSP_UP | BSP_DN
 
-    # ── Offer stack ──────────────────────────────────────────────────────────
+    # - Offer stack -
     offer_rows = []
     all_providers = set(step5_input.GENERATORS_UP) | set(step5_input.GENERATORS_DN)
     for g in sorted(all_providers):
@@ -437,7 +436,7 @@ def step5_build_summary_tables(
         })
     df_offers = pd.DataFrame(offer_rows)
 
-    # ── Generator profits ────────────────────────────────────────────────────
+    # - Generator profits -
     # Three categories:
     #   BSP: activated balancing provider → remunerated at λ_B, no BRP settlement
     #   BRP with deviation: has DA schedule but deviates (G8) → BRP settlement applies
@@ -504,7 +503,7 @@ def step5_build_summary_tables(
         })
     df_gen = pd.DataFrame(gen_rows).sort_values("generator")
 
-    # ── Wind profits ─────────────────────────────────────────────────────────
+    # - Wind profits -
     wind_rows = []
     for w in da_input.WINDS:
         pW_DA   = wind_da_dispatch[w]
@@ -537,7 +536,7 @@ def step5_build_summary_tables(
         })
     df_wind = pd.DataFrame(wind_rows).sort_values("wind")
 
-    # ── Totals ───────────────────────────────────────────────────────────────
+    # - Totals -
     totals = {
         "da_price":                    λ_DA,
         "balancing_price":             λ_B,
@@ -569,7 +568,7 @@ def step5_build_comparison_table(df_gen, df_wind):
     """
     rows = []
 
-    # ── BSPs (activated generators) ───────────────────────────────────────────
+    # - BSPs (activated generators) -
     bsp_df = df_gen[df_gen["role"] == "BSP"]
     if not bsp_df.empty:
         rows.append({
@@ -583,7 +582,7 @@ def step5_build_comparison_table(df_gen, df_wind):
             "note": "Remunerated at λ_B; settlement scheme does not apply"
         })
 
-    # ── G8: causes imbalance (BRP, failed generator) ──────────────────────────
+    # - G8: causes imbalance (BRP, failed generator) -
     brp_gen_df = df_gen[df_gen["role"] == "BRP (failed)"]
     if not brp_gen_df.empty:
         rows.append({
@@ -597,7 +596,7 @@ def step5_build_comparison_table(df_gen, df_wind):
             "note": "Δ < 0 in short system → penalised at λ_B under both schemes"
         })
 
-    # ── Wind farms causing imbalance (Δ < 0) ──────────────────────────────────
+    # - Wind farms causing imbalance (Δ < 0) -
     wind_bad = df_wind[df_wind["deviation_MW"] < 0]
     if not wind_bad.empty:
         rows.append({
@@ -611,7 +610,7 @@ def step5_build_comparison_table(df_gen, df_wind):
             "note": "Δ < 0 in short system → penalised at λ_B under both schemes"
         })
 
-    # ── Wind farms helping system (Δ > 0) ─────────────────────────────────────
+    # - Wind farms helping system (Δ > 0) -
     wind_good = df_wind[df_wind["deviation_MW"] > 0]
     if not wind_good.empty:
         rows.append({
@@ -625,7 +624,7 @@ def step5_build_comparison_table(df_gen, df_wind):
             "note": "Δ > 0 in short system → 1-price rewards at λ_B, 2-price only at λ_DA"
         })
 
-    # ── Neutral generators (no deviation, no balancing service) ───────────────
+    # - Neutral generators (no deviation, no balancing service) -
     neutral_df = df_gen[df_gen["role"] == ""]
     neutral_dispatched = neutral_df[neutral_df["pG_DA_MW"] > 1e-6]
     if not neutral_dispatched.empty:
@@ -648,9 +647,8 @@ def step5_build_comparison_table(df_gen, df_wind):
 
     return df_comparison
 
-# ========================
+
 # STEP 6: RESERVE MARKET RESULTS
-# ========================
 
 
 
@@ -668,7 +666,7 @@ def step6_build_summary_tables(
     λ_up_res   = res6a.lambda_up_res     # upward reserve price
     λ_dn_res   = res6a.lambda_dn_res     # downward reserve price
 
-    # ── Reserve commitment table ──────────────────────────────────────────────
+    # - Reserve commitment table -
     res_rows = []
     all_res_gens = set(inp6a.GENERATORS_UP_RES) | set(inp6a.GENERATORS_DN_RES)
     for g in sorted(all_res_gens):
@@ -691,7 +689,7 @@ def step6_build_summary_tables(
         })
     df_reserve = pd.DataFrame(res_rows)
 
-    # ── Generator DA dispatch & total profit (reserve revenue + DA profit) ───
+    # - Generator DA dispatch & total profit (reserve revenue + DA profit) -
     gen_rows = []
     for g in inp6b.GENERATORS:
         pG_new   = res6b.pG[g]
@@ -726,7 +724,7 @@ def step6_build_summary_tables(
         })
     df_gen = pd.DataFrame(gen_rows).sort_values("generator")
 
-    # ── Wind dispatch & profit ────────────────────────────────────────────────
+    # - Wind dispatch & profit -
     wind_rows = []
     for w in inp6b.WINDS:
         pw_new = res6b.pW[w]
@@ -740,7 +738,7 @@ def step6_build_summary_tables(
         })
     df_wind = pd.DataFrame(wind_rows).sort_values("wind")
 
-    # ── Demand served & utility ───────────────────────────────────────────────
+    # - Demand served & utility -
     dem_rows = []
     for n in inp6b.LOAD_BUSES:
         dn_new = res6b.d[n]
@@ -756,7 +754,7 @@ def step6_build_summary_tables(
         })
     df_dem = pd.DataFrame(dem_rows).sort_values("bus")
 
-    # ── Totals ────────────────────────────────────────────────────────────────
+    # - Totals -
     total_op_cost_new = (df_gen["marginal_cost"] * df_gen["pG_new_MW"]).sum()
     total_op_cost_old = (df_gen["marginal_cost"] * df_gen["pG_step1_MW"]).sum()
 
