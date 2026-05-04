@@ -26,8 +26,8 @@ class RawData:
     """
     Cleaned raw inputs for the stochastic offering problem.
 
-    Attributes
-    ----------
+    Dataset descriptions:
+
     wind_cf : pd.Series
         Hourly bias-corrected wind capacity factor [0, 1] for the
         DK01 NUTS-2 region (within the DK2 price zone).
@@ -45,9 +45,8 @@ class RawData:
     imbalance: pd.DataFrame
 
 
-# ----------------------------------------------------------------------
+
 # Helpers
-# ----------------------------------------------------------------------
 
 def _expected_hours(year: int) -> int:
     """
@@ -59,9 +58,9 @@ def _expected_hours(year: int) -> int:
     return 8760
 
 
-# ----------------------------------------------------------------------
+
 # Individual loaders
-# ----------------------------------------------------------------------
+
 
 def load_wind_capacity_factor(path: str | Path,
                               region: str = "DK01",
@@ -156,9 +155,9 @@ def load_imbalance(path: str | Path,
     return df
 
 
-# ----------------------------------------------------------------------
-# High-level loader
-# ----------------------------------------------------------------------
+
+# Loader for main script
+
 
 def load_all(data_dir: str | Path = "data/raw",
              year: int = 2024) -> RawData:
