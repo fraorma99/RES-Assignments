@@ -231,17 +231,25 @@ class StochasticOfferingTwoPrice:
         r.profit_per_scenario = da_part + up_part - dn_part                     # (n_w,)
         r.expected_profit = float((d.pi * r.profit_per_scenario).sum())
 
-        # Diagnostic: verify the LP relaxation of complementarity holds in
-        # practice (delta_up and delta_dn should not both be strictly
-        # positive in the same (t,w) cell). Violations can occur in hours
-        # with negative DA prices.
+        # Diagnostic: count cells where the LP picked one of multiple
+        # equivalent optima (delta_up and delta_dn both > 0). This is
+        # harmless when psi_up == psi_dn (negative-price hours under our
+        # override), because the objective contribution depends only on
+        # the difference (delta_up - delta_dn), not on each individually.
+        # We track it for completeness; in well-posed cells (psi_up < psi_dn)
+        # the violation count must be zero.
         both_positive = (r.delta_up > 1e-6) & (r.delta_dn > 1e-6)
-        r.complementarity_violations = int(both_positive.sum())
+        psi_up_TW = d.psi_up.T  # (n_t, n_w)
+        psi_dn_TW = d.psi_dn.T  # (n_t, n_w)
+        well_posed_violations = both_positive & (psi_dn_TW > psi_up_TW + 1e-9)
+        r.complementarity_violations = int(well_posed_violations.sum())
+        r.harmless_degenerate_cells = int(both_positive.sum() - well_posed_violations.sum())
+
         if r.complementarity_violations > 0:
             print(
                 f"Warning: {r.complementarity_violations} (t,w) cells have "
-                f"both delta_up and delta_dn strictly positive (LP relaxation "
-                f"artifact, possibly in negative-price hours)."
+                f"both delta_up and delta_dn strictly positive in well-posed "
+                f"hours (psi_dn > psi_up). This indicates a model bug."
             )
 
     def run(self, verbose: bool = False):
