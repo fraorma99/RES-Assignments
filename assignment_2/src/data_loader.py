@@ -6,11 +6,12 @@ Nord Pool DK2 day-ahead prices, Energinet system imbalance) and returns
 a clean RawData container holding three pandas objects, each indexed
 on a uniform 365-day, 8760-hour calendar grid for the year 2024.
 
-Calendar alignment notes:
-- The Nord Pool DK2 2024 file covers Jan 1 - Dec 30 (8760 hours, includes
-  Feb 29) and is the "limiting" dataset.
-- The Renewables.ninja and Energinet files cover the full leap year
-  (Jan 1 - Dec 31, 8784 hours); we drop Dec 31 to align with Nord Pool.
+Calendar alignment note:
+    2024 is a leap year (8784 hours), but the Nord Pool DK2 file we
+    downloaded only covers Jan 1 - Dec 30 (8760 hours, Feb 29 included).
+    To keep all three datasets on the same shape, we drop Dec 31 from the
+    Renewables.ninja and Energinet files. Losing one day has no practical
+    impact: scenarios are sampled at random from 365 daily trajectories.
 
 This module is purely I/O: no scenario generation, no SI binarization,
 no scaling. Those transformations live in scenario_generation.py.
