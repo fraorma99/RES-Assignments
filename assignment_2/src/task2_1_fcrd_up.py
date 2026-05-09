@@ -1,3 +1,24 @@
+"""
+FCR-D UP reserve bid for a stochastic flexible load under the P90 requirement.
+Implements Task 2.1 of Assignment 2.
+
+Two methods are used to determine the optimal reserve bid:
+
+    ALSO-X: empirical chance-constrained formulation. The reserve bid is the
+    largest value such that at most 10% of in-sample profiles violate the
+    availability constraint (i.e. the (floor(epsilon * N_in) + 1)-th order
+    statistic of the sorted minimum-load vector).
+
+    CVaR approximation: more conservative alternative. Instead of only
+    limiting the number of violations, it penalises their magnitude via
+    the expected shortfall in the tail. The resulting bid is the mean of
+    the worst tail_size minimum-load values.
+
+Load profiles are generated as bounded random walks with:
+    - consumption in [220, 600] kW
+    - minute-to-minute changes <= 35 kW
+"""
+
 import numpy as np
 import pandas as pd
 
@@ -10,27 +31,42 @@ LOAD_MIN = 220
 LOAD_MAX = 600
 MAX_STEP = 35
 
-N_IN = 100
-P_REQ = 0.90
-EPSILON = 1 - P_REQ
+N_IN    = 100      # number of in-sample profiles (first 100)
+P_REQ   = 0.90     # required reliability level (P90)
+EPSILON = 1 - P_REQ  # maximum allowed violation rate (0.10)
 
 
 def generate_load_profiles(
-    n_profiles: int = 300,
-    n_minutes: int = 60,
-    load_min: float = 220.0,
-    load_max: float = 600.0,
-    max_step: float = 35.0,
+    n_profiles: int = N_PROFILES,
+    n_minutes:  int = N_MINUTES,
+    load_min:   float = LOAD_MIN,
+    load_max:   float = LOAD_MAX,
+    max_step:   float = MAX_STEP,
     seed: int = 42,
 ) -> np.ndarray:
     """
-    Generate stochastic load profiles.
+    Generate stochastic load profiles as bounded random walks.
 
-    The profile is generated with a bounded random walk using reflection
-    at the lower and upper limits. This avoids artificial pile-up at 220 kW
-    while still satisfying:
-        220 <= load <= 600 kW
-        |load[m] - load[m-1]| <= 35 kW
+    At each minute, a Gaussian step (clipped to [-max_step, max_step]) is
+    added to the previous value. Boundary violations are corrected by
+    reflection rather than clipping, to avoid artificial pile-up at the bounds.
+
+    Parameters
+    ----------
+    n_profiles : int
+        Number of load profiles to generate (default 300).
+    n_minutes : int
+        Length of each profile in minutes (default 60).
+    load_min, load_max : float
+        Consumption bounds in kW (default [220, 600]).
+    max_step : float
+        Maximum allowed minute-to-minute change in kW (default 35).
+    seed : int
+        RNG seed for reproducibility (default 42).
+
+    Returns
+    -------
+    np.ndarray of shape (n_profiles, n_minutes), consumption in kW.
     """
     rng = np.random.default_rng(seed)
 
@@ -47,6 +83,7 @@ def generate_load_profiles(
         below = new_value < load_min
         new_value[below] = load_min + (load_min - new_value[below])
 
+        # Reflect at upper bound: values above load_max bounce back down
         above = new_value > load_max
         new_value[above] = load_max - (new_value[above] - load_max)
 
@@ -56,6 +93,7 @@ def generate_load_profiles(
     return profiles
 
 
+# Generate profiles
 profiles = generate_load_profiles(
     N_PROFILES,
     N_MINUTES,
